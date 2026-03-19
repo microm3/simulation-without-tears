@@ -1,0 +1,710 @@
+{
+  "results": [
+    {
+      "file": "university-ontology/main.als",
+      "modelName": "University Ontology",
+      "slug": "university-ontology",
+      "satisfiable": true,
+      "durationMs": 2928
+    },
+    {
+      "file": "chartered-service/main.als",
+      "modelName": "Chartered Service Ontology",
+      "slug": "chartered-service",
+      "satisfiable": false,
+      "durationMs": 327
+    },
+    {
+      "file": "sousa2022triponto/main.als",
+      "modelName": "TripOnto",
+      "slug": "sousa2022triponto",
+      "satisfiable": true,
+      "durationMs": 8521
+    },
+    {
+      "file": "buridan-ontology2021/main.als",
+      "modelName": "Buridan Ontology",
+      "slug": "buridan-ontology2021",
+      "satisfiable": true,
+      "durationMs": 10489
+    },
+    {
+      "file": "sales2018competition/main.als",
+      "modelName": "Ontology of Competition",
+      "slug": "sales2018competition",
+      "satisfiable": false,
+      "durationMs": 1933
+    },
+    {
+      "file": "elghosh2020cargos/main.als",
+      "modelName": "CargO-S Rule 1",
+      "slug": "elghosh2020cargos",
+      "satisfiable": true,
+      "durationMs": 357
+    },
+    {
+      "file": "stock-broker2021/main.als",
+      "modelName": "Stock Brokerage Model",
+      "slug": "stock-broker2021",
+      "satisfiable": true,
+      "durationMs": 297
+    },
+    {
+      "file": "project-management-ontology/main.als",
+      "modelName": "Project Management Ontology",
+      "slug": "project-management-ontology",
+      "satisfiable": true,
+      "durationMs": 302
+    },
+    {
+      "file": "sportbooking2021/main.als",
+      "modelName": "Sport Booking Model",
+      "slug": "sportbooking2021",
+      "satisfiable": true,
+      "durationMs": 7293
+    },
+    {
+      "file": "construction-model/main.als",
+      "modelName": "The Construction Model",
+      "slug": "construction-model",
+      "satisfiable": true,
+      "durationMs": 208
+    },
+    {
+      "file": "lindeberg2022simple-ontorights/main.als",
+      "modelName": "Simple OntoRights",
+      "slug": "lindeberg2022simple-ontorights",
+      "error": "ErrorType: Translation capacity exceeded.\nIn this scope, universe contains 217 atoms\nand relations of arity 4 cannot be represented.\nVisit http://alloy.mit.edu/ for advice on refactoring.",
+      "durationMs": 114
+    },
+    {
+      "file": "fumagalli2022criminal-investigation/main.als",
+      "modelName": "OntoUML Model Representing a Subset of Criminal Investigation Domain",
+      "slug": "fumagalli2022criminal-investigation",
+      "satisfiable": true,
+      "durationMs": 269
+    },
+    {
+      "file": "khantong2020ontology/main.als",
+      "modelName": "Disaster Response Ontology - Flood Response Scenarios",
+      "slug": "khantong2020ontology",
+      "satisfiable": true,
+      "durationMs": 1272
+    },
+    {
+      "file": "silva2012itarchitecture/main.als",
+      "modelName": "IT Architecture Ontology (PAS 77:2006 Ontology)",
+      "slug": "silva2012itarchitecture",
+      "satisfiable": true,
+      "durationMs": 15276
+    },
+    {
+      "file": "porello2020coex/main.als",
+      "modelName": "Core ontology for economic exchange",
+      "slug": "porello2020coex",
+      "satisfiable": true,
+      "durationMs": 264
+    },
+    {
+      "file": "tourbo2021/main.als",
+      "modelName": "Tour Guide Booking Ontology",
+      "slug": "tourbo2021",
+      "satisfiable": false,
+      "durationMs": 8518
+    },
+    {
+      "file": "castro2012cloudvulnerability/main.als",
+      "modelName": "Cloud Vulnerability Ontology",
+      "slug": "castro2012cloudvulnerability",
+      "satisfiable": true,
+      "durationMs": 2227
+    },
+    {
+      "file": "social-contract/main.als",
+      "modelName": "Social Contract Model",
+      "slug": "social-contract",
+      "satisfiable": false,
+      "durationMs": 1413
+    },
+    {
+      "file": "zhou2017hazard-ontology-train-control/main.als",
+      "modelName": "Train Control System",
+      "slug": "zhou2017hazard-ontology-train-control",
+      "satisfiable": true,
+      "durationMs": 146
+    },
+    {
+      "file": "nardi2015ufo-s/main.als",
+      "modelName": "Commitment-based Reference Ontology for Services",
+      "slug": "nardi2015ufo-s",
+      "satisfiable": false,
+      "durationMs": 1154
+    },
+    {
+      "file": "aristotle-ontology2019/main.als",
+      "modelName": "Aristotle Ontology",
+      "slug": "aristotle-ontology2019",
+      "satisfiable": true,
+      "durationMs": 211581
+    },
+    {
+      "file": "photography/main.als",
+      "modelName": "Photography Collection Ontology",
+      "slug": "photography",
+      "satisfiable": true,
+      "durationMs": 413
+    },
+    {
+      "file": "santos2020valuenetworks/main.als",
+      "modelName": "Ontology for Value Networks with Corporate Responsibility",
+      "slug": "santos2020valuenetworks",
+      "satisfiable": true,
+      "durationMs": 252
+    },
+    {
+      "file": "amaral2020game-theory/main.als",
+      "modelName": "Game Theory Ontology",
+      "slug": "amaral2020game-theory",
+      "satisfiable": true,
+      "durationMs": 130
+    },
+    {
+      "file": "alpinebits2022/main.als",
+      "modelName": "AlpineBits DestinationData Ontology",
+      "slug": "alpinebits2022",
+      "satisfiable": true,
+      "durationMs": 28322
+    },
+    {
+      "file": "romanenko2023what/main.als",
+      "modelName": "Library management system",
+      "slug": "romanenko2023what",
+      "satisfiable": true,
+      "durationMs": 4968
+    },
+    {
+      "file": "fischer2018ontorea/main.als",
+      "modelName": "OntoREA© Accounting and Finance Model",
+      "slug": "fischer2018ontorea",
+      "satisfiable": true,
+      "durationMs": 1169
+    },
+    {
+      "file": "music-ontology/main.als",
+      "modelName": "Music Ontology",
+      "slug": "music-ontology",
+      "satisfiable": true,
+      "durationMs": 3056
+    },
+    {
+      "file": "cgts2021sebim/main.als",
+      "modelName": "Semantic Building Information Modeling Ontology",
+      "slug": "cgts2021sebim",
+      "satisfiable": true,
+      "durationMs": 728
+    },
+    {
+      "file": "dpo2017/main.als",
+      "modelName": "Design Process Ontology",
+      "slug": "dpo2017",
+      "satisfiable": true,
+      "durationMs": 675
+    },
+    {
+      "file": "garcia2022human-genome-events/main.als",
+      "modelName": "Ontologically enriched version of Conceptual Schema of the Human Genome",
+      "slug": "garcia2022human-genome-events",
+      "satisfiable": true,
+      "durationMs": 112
+    },
+    {
+      "file": "health-organizations/main.als",
+      "modelName": "Model of Health Organizations",
+      "slug": "health-organizations",
+      "satisfiable": true,
+      "durationMs": 835
+    },
+    {
+      "file": "digitaldoctor2022/main.als",
+      "modelName": "Digital Doctor Ontology",
+      "slug": "digitaldoctor2022",
+      "satisfiable": true,
+      "durationMs": 25507
+    },
+    {
+      "file": "buchtela2020connection/main.als",
+      "modelName": "Knowledge Representation Model of Students\u0027 Activities",
+      "slug": "buchtela2020connection",
+      "satisfiable": true,
+      "durationMs": 700
+    },
+    {
+      "file": "bernasconi2023fair-principles/main.als",
+      "modelName": "OntoUML FAIR Principles Schema",
+      "slug": "bernasconi2023fair-principles",
+      "satisfiable": true,
+      "durationMs": 4855
+    },
+    {
+      "file": "aguiar2019ooco/main.als",
+      "modelName": "Reference Ontology on Object-Oriented Code",
+      "slug": "aguiar2019ooco",
+      "error": "ErrorType: Name cannot be resolved; possible incorrect function/predicate call; perhaps you used ( ) when you should have used [ ]\n\nThis cannot be a correct call to fun ternary/select13.\nThe parameters are\n  r: {univ-\u003euniv-\u003euniv}\nso the arguments cannot be\n  w . (this/World \u003c: relation2) (type \u003d {this/Object-\u003ethis/Object})\n",
+      "durationMs": 27
+    },
+    {
+      "file": "barcelos2015transport-networks/main.als",
+      "modelName": "Technology-independent Multi-layer Transport Networks",
+      "slug": "barcelos2015transport-networks",
+      "satisfiable": true,
+      "durationMs": 8632642
+    },
+    {
+      "file": "kritz2020ontobg/main.als",
+      "modelName": "Ontology of Board Games",
+      "slug": "kritz2020ontobg",
+      "satisfiable": true,
+      "durationMs": 87019
+    },
+    {
+      "file": "clergy-ontology/main.als",
+      "modelName": "Clergy Ontology",
+      "slug": "clergy-ontology",
+      "satisfiable": true,
+      "durationMs": 1850
+    },
+    {
+      "file": "idaf2013/main.als",
+      "modelName": "Structure of the IDAF Ontology",
+      "slug": "idaf2013",
+      "satisfiable": true,
+      "durationMs": 4175
+    },
+    {
+      "file": "zanetti2019orm-o/main.als",
+      "modelName": "Object/Relational Mapping Ontology",
+      "slug": "zanetti2019orm-o",
+      "satisfiable": true,
+      "durationMs": 2101
+    },
+    {
+      "file": "neves2021grain-production/main.als",
+      "modelName": "Grain Production Ontology",
+      "slug": "neves2021grain-production",
+      "satisfiable": true,
+      "durationMs": 384
+    },
+    {
+      "file": "silveira2021oap/main.als",
+      "modelName": "Ontologia de Referência para Arquiteturas Pedagógicas",
+      "slug": "silveira2021oap",
+      "satisfiable": true,
+      "durationMs": 1596
+    },
+    {
+      "file": "guizzardi2005ontological/main.als",
+      "modelName": "Example of Integrated Ontology",
+      "slug": "guizzardi2005ontological",
+      "satisfiable": true,
+      "durationMs": 4347
+    },
+    {
+      "file": "it-infrastructure/main.als",
+      "modelName": "IT Infrastructure Model",
+      "slug": "it-infrastructure",
+      "satisfiable": true,
+      "durationMs": 1145
+    },
+    {
+      "file": "guizzardi2022ufo/main.als",
+      "modelName": "OntoUML Examples",
+      "slug": "guizzardi2022ufo",
+      "satisfiable": true,
+      "durationMs": 4492
+    },
+    {
+      "file": "real-estate-ontology/main.als",
+      "modelName": "Real Estate Model",
+      "slug": "real-estate-ontology",
+      "satisfiable": true,
+      "durationMs": 317
+    },
+    {
+      "file": "guarino2018rea/main.als",
+      "modelName": "Ontological Analysis of REA",
+      "slug": "guarino2018rea",
+      "satisfiable": true,
+      "durationMs": 161
+    },
+    {
+      "file": "online-mentoring/main.als",
+      "modelName": "Online Mentoring Model",
+      "slug": "online-mentoring",
+      "satisfiable": true,
+      "durationMs": 1459
+    },
+    {
+      "file": "laurier2018rea/main.als",
+      "modelName": "REA Ontology",
+      "slug": "laurier2018rea",
+      "satisfiable": true,
+      "durationMs": 967
+    },
+    {
+      "file": "sales2018cover/main.als",
+      "modelName": "Common Ontology of Value and Risk",
+      "slug": "sales2018cover",
+      "satisfiable": true,
+      "durationMs": 3904
+    },
+    {
+      "file": "plato-ontology2019/main.als",
+      "modelName": "Plato Ontology",
+      "slug": "plato-ontology2019",
+      "satisfiable": true,
+      "durationMs": 22755
+    },
+    {
+      "file": "bank-model/main.als",
+      "modelName": "Bank Model",
+      "slug": "bank-model",
+      "satisfiable": true,
+      "durationMs": 707
+    },
+    {
+      "file": "internship/main.als",
+      "modelName": "Internship Ontology",
+      "slug": "internship",
+      "satisfiable": true,
+      "durationMs": 1796
+    },
+    {
+      "file": "unimatch-ontology2022/main.als",
+      "modelName": "Predictive System for University Admissions \"UniMatch\"",
+      "slug": "unimatch-ontology2022",
+      "satisfiable": true,
+      "durationMs": 1553
+    },
+    {
+      "file": "srro-ontology/main.als",
+      "modelName": "SRRO Ontology",
+      "slug": "srro-ontology",
+      "satisfiable": true,
+      "durationMs": 726
+    },
+    {
+      "file": "amaral2020rome/main.als",
+      "modelName": "Reference Ontology of Money and Virtual Currencies",
+      "slug": "amaral2020rome",
+      "satisfiable": false,
+      "durationMs": 7717
+    },
+    {
+      "file": "duarte2020jogabilidade/main.als",
+      "modelName": "Gameplay Ontology",
+      "slug": "duarte2020jogabilidade",
+      "satisfiable": true,
+      "durationMs": 395
+    },
+    {
+      "file": "aguiar2018rdbs-o/main.als",
+      "modelName": "Relational Database System Ontology",
+      "slug": "aguiar2018rdbs-o",
+      "satisfiable": true,
+      "durationMs": 4640
+    },
+    {
+      "file": "pereira2020ontotrans/main.als",
+      "modelName": "OntoTrans",
+      "slug": "pereira2020ontotrans",
+      "satisfiable": true,
+      "durationMs": 392
+    },
+    {
+      "file": "martinez2013human-genome/main.als",
+      "modelName": "Conceptual Schema of Human Genome",
+      "slug": "martinez2013human-genome",
+      "error": "ErrorType: Name cannot be resolved; possible incorrect function/predicate call; perhaps you used ( ) when you should have used [ ]\n\nThis cannot be a correct call to fun ternary/select13.\nThe parameters are\n  r: {univ-\u003euniv-\u003euniv}\nso the arguments cannot be\n  w . (this/World \u003c: relation2) (type \u003d {this/Object-\u003ethis/Object})\n",
+      "durationMs": 15
+    },
+    {
+      "file": "core-o2023/main.als",
+      "modelName": "Competence Reference Ontology",
+      "slug": "core-o2023",
+      "satisfiable": false,
+      "durationMs": 1766
+    },
+    {
+      "file": "public-expense-ontology2020/main.als",
+      "modelName": "Public Expense Ontology",
+      "slug": "public-expense-ontology2020",
+      "satisfiable": true,
+      "durationMs": 3125
+    },
+    {
+      "file": "guarino2016value/main.als",
+      "modelName": "Value Ascription Ontology",
+      "slug": "guarino2016value",
+      "satisfiable": true,
+      "durationMs": 555
+    },
+    {
+      "file": "falduci2022non-consensual-pornography/main.als",
+      "modelName": "Non-Consensual Pornography Phenomenon",
+      "slug": "falduci2022non-consensual-pornography",
+      "satisfiable": true,
+      "durationMs": 2976
+    },
+    {
+      "file": "niederkofler2019dssapple/main.als",
+      "modelName": "DSSApple Ontology",
+      "slug": "niederkofler2019dssapple",
+      "satisfiable": true,
+      "durationMs": 3454
+    },
+    {
+      "file": "experiment2013/main.als",
+      "modelName": "Experiment Model",
+      "slug": "experiment2013",
+      "satisfiable": false,
+      "durationMs": 536
+    },
+    {
+      "file": "gi2mo/main.als",
+      "modelName": "Generic Idea and Innovation Management Ontology Refactored",
+      "slug": "gi2mo",
+      "satisfiable": true,
+      "durationMs": 12047
+    },
+    {
+      "file": "library/main.als",
+      "modelName": "Library Ontology",
+      "slug": "library",
+      "satisfiable": true,
+      "durationMs": 3713
+    },
+    {
+      "file": "oliveira2022rose/main.als",
+      "modelName": "Ontology of Security from a Risk Treatment Perspective",
+      "slug": "oliveira2022rose",
+      "satisfiable": true,
+      "durationMs": 1415
+    },
+    {
+      "file": "carolla2014campus-management/main.als",
+      "modelName": "Campus Management System Reference Data Model",
+      "slug": "carolla2014campus-management",
+      "satisfiable": true,
+      "durationMs": 1082
+    },
+    {
+      "file": "qam/main.als",
+      "modelName": "Quality Assurance Model",
+      "slug": "qam",
+      "satisfiable": true,
+      "durationMs": 2335
+    },
+    {
+      "file": "zhou2017hazard-ontology-robotic-strolling/main.als",
+      "modelName": "Robotic Strolling System",
+      "slug": "zhou2017hazard-ontology-robotic-strolling",
+      "satisfiable": true,
+      "durationMs": 66
+    },
+    {
+      "file": "abel2015petroleum-system/main.als",
+      "modelName": "Petroleum System Model",
+      "slug": "abel2015petroleum-system",
+      "satisfiable": true,
+      "durationMs": 726
+    },
+    {
+      "file": "haridy2021egyptian-e-government/main.als",
+      "modelName": "Egyptian E-Government Conceptual Model",
+      "slug": "haridy2021egyptian-e-government",
+      "satisfiable": false,
+      "durationMs": 1071
+    },
+    {
+      "file": "eu-rent-refactored2022/main.als",
+      "modelName": "EU-Rent Car Rentals Refactored",
+      "slug": "eu-rent-refactored2022",
+      "satisfiable": true,
+      "durationMs": 36240
+    },
+    {
+      "file": "elikan2018brand-identity/main.als",
+      "modelName": "Brand Identity Ontology",
+      "slug": "elikan2018brand-identity",
+      "satisfiable": true,
+      "durationMs": 1021
+    },
+    {
+      "file": "bernasconi2021ontovcm/main.als",
+      "modelName": "Ontological Viral Conceptual Model",
+      "slug": "bernasconi2021ontovcm",
+      "satisfiable": true,
+      "durationMs": 4429
+    },
+    {
+      "file": "pereira2015doacao-orgaos/main.als",
+      "modelName": "Ontologia de Doação de Órgão e Tecidos",
+      "slug": "pereira2015doacao-orgaos",
+      "satisfiable": true,
+      "durationMs": 672
+    },
+    {
+      "file": "amaral2019rot/main.als",
+      "modelName": "Reference Ontology of Trust",
+      "slug": "amaral2019rot",
+      "satisfiable": true,
+      "durationMs": 5276
+    },
+    {
+      "file": "fernandez-cejas2022curie-o/main.als",
+      "modelName": "Customer Relationship, Intelligence and Experiences Ontology",
+      "slug": "fernandez-cejas2022curie-o",
+      "satisfiable": true,
+      "durationMs": 424
+    },
+    {
+      "file": "g809-2015/main.als",
+      "modelName": "G.809 Model",
+      "slug": "g809-2015",
+      "satisfiable": false,
+      "durationMs": 1667
+    },
+    {
+      "file": "fonseca2022incorporating/main.als",
+      "modelName": "Examples of Multi-level Modeling",
+      "slug": "fonseca2022incorporating",
+      "satisfiable": true,
+      "durationMs": 1513
+    },
+    {
+      "file": "amaral2022ethical-requirements/main.als",
+      "modelName": "Reference Ontology of Ethical Requirements",
+      "slug": "amaral2022ethical-requirements",
+      "satisfiable": true,
+      "durationMs": 504
+    },
+    {
+      "file": "jacobs2022sdpontology/main.als",
+      "modelName": "Software Development Project Ontology",
+      "slug": "jacobs2022sdpontology",
+      "satisfiable": true,
+      "durationMs": 1077
+    },
+    {
+      "file": "internal-affairs2013/main.als",
+      "modelName": "Internal Affairs Ontology",
+      "slug": "internal-affairs2013",
+      "satisfiable": true,
+      "durationMs": 9437
+    },
+    {
+      "file": "ramirez2015userfeedback/main.als",
+      "modelName": "User Feedback Ontology",
+      "slug": "ramirez2015userfeedback",
+      "satisfiable": true,
+      "durationMs": 4205
+    },
+    {
+      "file": "barcelos2013normative-acts/main.als",
+      "modelName": "Normative Acts",
+      "slug": "barcelos2013normative-acts",
+      "satisfiable": true,
+      "durationMs": 5722
+    },
+    {
+      "file": "valaski2020medical-appointment/main.als",
+      "modelName": "Medical Appointment Ontology",
+      "slug": "valaski2020medical-appointment",
+      "satisfiable": true,
+      "durationMs": 74
+    },
+    {
+      "file": "goncalves2011ecg/main.als",
+      "modelName": "Electrocardiogram (ECG) Ontology",
+      "slug": "goncalves2011ecg",
+      "satisfiable": true,
+      "durationMs": 140460
+    },
+    {
+      "file": "albuquerque2011ontobio/main.als",
+      "modelName": "OntoBio",
+      "slug": "albuquerque2011ontobio",
+      "satisfiable": true,
+      "durationMs": 31952
+    },
+    {
+      "file": "freshbz2023/main.als",
+      "modelName": "FreshBZ Application UML",
+      "slug": "freshbz2023",
+      "satisfiable": true,
+      "durationMs": 22949
+    },
+    {
+      "file": "public-tender/main.als",
+      "modelName": "Public Tender Model",
+      "slug": "public-tender",
+      "satisfiable": true,
+      "durationMs": 9299
+    },
+    {
+      "file": "fraller2019abc/main.als",
+      "modelName": "Capacity-Based Activity-Based Costing System Model",
+      "slug": "fraller2019abc",
+      "satisfiable": false,
+      "durationMs": 6634
+    },
+    {
+      "file": "mgic-antt2011/main.als",
+      "modelName": "National Agency of Terrestrial Transportation (ANTT) Ontology",
+      "slug": "mgic-antt2011",
+      "error": "ErrorSyntax: There are 38 possible tokens that can appear here:\n! # ( * @ Int NAME NUMBER STRING String ^ after all always before disj eventually fun historically iden int let lone no none once one pred seq set some steps sum this univ { } ~ ",
+      "durationMs": 294
+    },
+    {
+      "file": "barros2020programming/main.als",
+      "modelName": "Ontology of Nationality according to the Federal Constitution of Brazil",
+      "slug": "barros2020programming",
+      "satisfiable": true,
+      "durationMs": 123
+    },
+    {
+      "file": "junior2018o4c/main.als",
+      "modelName": "Ontology for Concerns",
+      "slug": "junior2018o4c",
+      "satisfiable": true,
+      "durationMs": 147
+    },
+    {
+      "file": "recommendation-ontology/main.als",
+      "modelName": "Recommendation Ontology",
+      "slug": "recommendation-ontology",
+      "satisfiable": true,
+      "durationMs": 504
+    },
+    {
+      "file": "brazilian-governmental-organizational-structures/main.als",
+      "modelName": "Brazilian Federal Organizational Structures - Ontology Draft",
+      "slug": "brazilian-governmental-organizational-structures",
+      "satisfiable": true,
+      "durationMs": 410
+    },
+    {
+      "file": "gomes2022digital-technology/main.als",
+      "modelName": "Digital Technology",
+      "slug": "gomes2022digital-technology",
+      "satisfiable": true,
+      "durationMs": 708
+    }
+  ],
+  "summary": {
+    "total": 100,
+    "sat": 85,
+    "unsat": 11,
+    "failed": 4
+  }
+}

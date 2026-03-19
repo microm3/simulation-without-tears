@@ -1,0 +1,1235 @@
+{
+  "alloyOutDir": "evaluation/pipeline-verification/results-baseline/batch-alloy-output",
+  "runs": [
+    {
+      "modelName": "University Ontology",
+      "slug": "university-ontology",
+      "jsonPath": "university-ontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15068199942102014632.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Core Value Ontology",
+      "slug": "gailly2016value",
+      "jsonPath": "gailly2016value/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "gailly2016value/main.als"
+      ]
+    },
+    {
+      "modelName": "Role Playing Games Ontology",
+      "slug": "franco2018rpg",
+      "jsonPath": "franco2018rpg/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "franco2018rpg/main.als"
+      ]
+    },
+    {
+      "modelName": "Chartered Service Ontology",
+      "slug": "chartered-service",
+      "jsonPath": "chartered-service/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "chartered-service/main.als"
+      ]
+    },
+    {
+      "modelName": "MulseOnto",
+      "slug": "saleme2019mulseonto",
+      "jsonPath": "saleme2019mulseonto/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "saleme2019mulseonto/main.als"
+      ]
+    },
+    {
+      "modelName": "TripOnto",
+      "slug": "sousa2022triponto",
+      "jsonPath": "sousa2022triponto/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17320432605746802853.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Buridan Ontology",
+      "slug": "buridan-ontology2021",
+      "jsonPath": "buridan-ontology2021/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9124082871398218505.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontology of Competition",
+      "slug": "sales2018competition",
+      "jsonPath": "sales2018competition/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12274132404968678141.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "CargO-S Rule 1",
+      "slug": "elghosh2020cargos",
+      "jsonPath": "elghosh2020cargos/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "elghosh2020cargos/main.als"
+      ]
+    },
+    {
+      "modelName": "Stock Brokerage Model",
+      "slug": "stock-broker2021",
+      "jsonPath": "stock-broker2021/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "stock-broker2021/main.als"
+      ]
+    },
+    {
+      "modelName": "Full OntoRights",
+      "slug": "lindeberg2022full-ontorights",
+      "jsonPath": "lindeberg2022full-ontorights/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12058035462369159908.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Software Project Management Ontology",
+      "slug": "spmo2017",
+      "jsonPath": "spmo2017/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13510592735693428863.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Project Management Ontology",
+      "slug": "project-management-ontology",
+      "jsonPath": "project-management-ontology/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "project-management-ontology/main.als"
+      ]
+    },
+    {
+      "modelName": "Sport Booking Model",
+      "slug": "sportbooking2021",
+      "jsonPath": "sportbooking2021/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9908263291933113069.js:121738\n          if (generalizationSet.generalizations.some((gen) \u003d\u003e this.hasUnsupportedStereotype(gen.specific) || this.hasUnsupportedStereotype(gen.general))) {\n                                                ^\n\nTypeError: Cannot read properties of null (reading \u0027some\u0027)\n    at Ontouml2Alloy2.removeUnsupportedElements (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9908263291933113069.js:121738:49)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9908263291933113069.js:121671:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9908263291933113069.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9908263291933113069.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\u001b[90m    at Module._load (node:internal/modules/cjs/loader:1299:12)\u001b[39m\n\u001b[90m    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\u001b[39m\n\u001b[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "The Construction Model",
+      "slug": "construction-model",
+      "jsonPath": "construction-model/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "construction-model/main.als"
+      ]
+    },
+    {
+      "modelName": "Simple OntoRights",
+      "slug": "lindeberg2022simple-ontorights",
+      "jsonPath": "lindeberg2022simple-ontorights/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5691415933258167334.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "OntoUML Model Representing a Subset of Criminal Investigation Domain",
+      "slug": "fumagalli2022criminal-investigation",
+      "jsonPath": "fumagalli2022criminal-investigation/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "fumagalli2022criminal-investigation/main.als"
+      ]
+    },
+    {
+      "modelName": "Digital Platform Ontology",
+      "slug": "derave2019dpo",
+      "jsonPath": "derave2019dpo/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-788243575021428927.js:121738\n          if (generalizationSet.generalizations.some((gen) \u003d\u003e this.hasUnsupportedStereotype(gen.specific) || this.hasUnsupportedStereotype(gen.general))) {\n                                                ^\n\nTypeError: Cannot read properties of null (reading \u0027some\u0027)\n    at Ontouml2Alloy2.removeUnsupportedElements (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-788243575021428927.js:121738:49)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-788243575021428927.js:121671:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-788243575021428927.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-788243575021428927.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\u001b[90m    at Module._load (node:internal/modules/cjs/loader:1299:12)\u001b[39m\n\u001b[90m    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\u001b[39m\n\u001b[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontology of Software Defects, Errors and Failures",
+      "slug": "duarte2018osdef",
+      "jsonPath": "duarte2018osdef/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "duarte2018osdef/main.als"
+      ]
+    },
+    {
+      "modelName": "Disaster Response Ontology - Flood Response Scenarios",
+      "slug": "khantong2020ontology",
+      "jsonPath": "khantong2020ontology/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "khantong2020ontology/main.als"
+      ]
+    },
+    {
+      "modelName": "IT Architecture Ontology (PAS 77:2006 Ontology)",
+      "slug": "silva2012itarchitecture",
+      "jsonPath": "silva2012itarchitecture/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6739618394854687292.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Requirements Engineering Ontology",
+      "slug": "duarte2018reqon",
+      "jsonPath": "duarte2018reqon/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "duarte2018reqon/main.als"
+      ]
+    },
+    {
+      "modelName": "Core ontology for economic exchange",
+      "slug": "porello2020coex",
+      "jsonPath": "porello2020coex/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "porello2020coex/main.als"
+      ]
+    },
+    {
+      "modelName": "Reference Ontology of Software Systems",
+      "slug": "duarte2021ross",
+      "jsonPath": "duarte2021ross/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "duarte2021ross/main.als"
+      ]
+    },
+    {
+      "modelName": "Tour Guide Booking Ontology",
+      "slug": "tourbo2021",
+      "jsonPath": "tourbo2021/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3413480180742353475.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Cloud Vulnerability Ontology",
+      "slug": "castro2012cloudvulnerability",
+      "jsonPath": "castro2012cloudvulnerability/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11034129890778648524.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Decision Making Ontology",
+      "slug": "guizzardi2020decision-making",
+      "jsonPath": "guizzardi2020decision-making/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "guizzardi2020decision-making/main.als"
+      ]
+    },
+    {
+      "modelName": "Social Contract Model",
+      "slug": "social-contract",
+      "jsonPath": "social-contract/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11801525384787028559.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Train Control System",
+      "slug": "zhou2017hazard-ontology-train-control",
+      "jsonPath": "zhou2017hazard-ontology-train-control/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "zhou2017hazard-ontology-train-control/main.als"
+      ]
+    },
+    {
+      "modelName": "An ontological analysis of artifact-centric business processes managed by smart contracts",
+      "slug": "van-wingerde2020smart-contracts",
+      "jsonPath": "van-wingerde2020smart-contracts/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "van-wingerde2020smart-contracts/main.als"
+      ]
+    },
+    {
+      "modelName": "Commitment-based Reference Ontology for Services",
+      "slug": "nardi2015ufo-s",
+      "jsonPath": "nardi2015ufo-s/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "nardi2015ufo-s/main.als"
+      ]
+    },
+    {
+      "modelName": "Aristotle Ontology",
+      "slug": "aristotle-ontology2019",
+      "jsonPath": "aristotle-ontology2019/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17997167425415857963.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Photography Collection Ontology",
+      "slug": "photography",
+      "jsonPath": "photography/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "photography/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontology for Value Networks with Corporate Responsibility",
+      "slug": "santos2020valuenetworks",
+      "jsonPath": "santos2020valuenetworks/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "santos2020valuenetworks/main.als"
+      ]
+    },
+    {
+      "modelName": "Game Theory Ontology",
+      "slug": "amaral2020game-theory",
+      "jsonPath": "amaral2020game-theory/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "amaral2020game-theory/main.als"
+      ]
+    },
+    {
+      "modelName": "AlpineBits DestinationData Ontology",
+      "slug": "alpinebits2022",
+      "jsonPath": "alpinebits2022/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18265417175485034044.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Library management system",
+      "slug": "romanenko2023what",
+      "jsonPath": "romanenko2023what/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "romanenko2023what/main.als"
+      ]
+    },
+    {
+      "modelName": "OntoREA© Accounting and Finance Model",
+      "slug": "fischer2018ontorea",
+      "jsonPath": "fischer2018ontorea/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "fischer2018ontorea/main.als"
+      ]
+    },
+    {
+      "modelName": "Goal-Oriented Safety Management Ontology",
+      "slug": "debbech2019gosmo",
+      "jsonPath": "debbech2019gosmo/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "debbech2019gosmo/main.als"
+      ]
+    },
+    {
+      "modelName": "Music Ontology",
+      "slug": "music-ontology",
+      "jsonPath": "music-ontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11471629251176218657.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Semantic Building Information Modeling Ontology",
+      "slug": "cgts2021sebim",
+      "jsonPath": "cgts2021sebim/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1468079868310348760.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Brazilian Criminal Law Ontology",
+      "slug": "rodrigues2019ontocrime",
+      "jsonPath": "rodrigues2019ontocrime/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:111501:21)\n    at _Relation.getDerivingRelationStereotype (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:111525:21)\n    at transformDerivationRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:121305:20)\n    at transformRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:121249:9)\n    at Ontouml2Alloy2.transformRelations (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:121841:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:121676:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2200262606143242614.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "PreProcessing Operators Ontology",
+      "slug": "ppo-o2021",
+      "jsonPath": "ppo-o2021/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "ppo-o2021/main.als"
+      ]
+    },
+    {
+      "modelName": "Design Process Ontology",
+      "slug": "dpo2017",
+      "jsonPath": "dpo2017/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "dpo2017/main.als"
+      ]
+    },
+    {
+      "modelName": "Decision Making in knowledge intensive process in Value Ascription and Goal processing",
+      "slug": "richetti2019tdecision",
+      "jsonPath": "richetti2019tdecision/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "richetti2019tdecision/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontologically enriched version of Conceptual Schema of the Human Genome",
+      "slug": "garcia2022human-genome-events",
+      "jsonPath": "garcia2022human-genome-events/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-9770319963174395377.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Model of Health Organizations",
+      "slug": "health-organizations",
+      "jsonPath": "health-organizations/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "health-organizations/main.als"
+      ]
+    },
+    {
+      "modelName": "Digital Doctor Ontology",
+      "slug": "digitaldoctor2022",
+      "jsonPath": "digitaldoctor2022/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-557106786837154181.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Knowledge Representation Model of Students\u0027 Activities",
+      "slug": "buchtela2020connection",
+      "jsonPath": "buchtela2020connection/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "buchtela2020connection/main.als"
+      ]
+    },
+    {
+      "modelName": "OntoUML FAIR Principles Schema",
+      "slug": "bernasconi2023fair-principles",
+      "jsonPath": "bernasconi2023fair-principles/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "bernasconi2023fair-principles/main.als"
+      ]
+    },
+    {
+      "modelName": "Reference Ontology on Object-Oriented Code",
+      "slug": "aguiar2019ooco",
+      "jsonPath": "aguiar2019ooco/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "aguiar2019ooco/main.als"
+      ]
+    },
+    {
+      "modelName": "Technology-independent Multi-layer Transport Networks",
+      "slug": "barcelos2015transport-networks",
+      "jsonPath": "barcelos2015transport-networks/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3822815018688651574.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontology of Board Games",
+      "slug": "kritz2020ontobg",
+      "jsonPath": "kritz2020ontobg/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "kritz2020ontobg/main.als"
+      ]
+    },
+    {
+      "modelName": "Software Ontology",
+      "slug": "swo2016",
+      "jsonPath": "swo2016/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "swo2016/main.als"
+      ]
+    },
+    {
+      "modelName": "Clergy Ontology",
+      "slug": "clergy-ontology",
+      "jsonPath": "clergy-ontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-11750695269610115382.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontology-based Multi-level Conceptual Model for Descriptors of Catalogued Resources",
+      "slug": "dcat-mlt-ufo2023",
+      "jsonPath": "dcat-mlt-ufo2023/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1421655072636856403.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Structure of the IDAF Ontology",
+      "slug": "idaf2013",
+      "jsonPath": "idaf2013/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "idaf2013/main.als"
+      ]
+    },
+    {
+      "modelName": "Object/Relational Mapping Ontology",
+      "slug": "zanetti2019orm-o",
+      "jsonPath": "zanetti2019orm-o/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "zanetti2019orm-o/main.als"
+      ]
+    },
+    {
+      "modelName": "Grain Production Ontology",
+      "slug": "neves2021grain-production",
+      "jsonPath": "neves2021grain-production/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "neves2021grain-production/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontologia de Referência para Arquiteturas Pedagógicas",
+      "slug": "silveira2021oap",
+      "jsonPath": "silveira2021oap/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "silveira2021oap/main.als"
+      ]
+    },
+    {
+      "modelName": "Example of Integrated Ontology",
+      "slug": "guizzardi2005ontological",
+      "jsonPath": "guizzardi2005ontological/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:120703:19)\n    at transformDatatypeAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:120979:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:120829:9)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17252036694001460544.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Turbidity Channel Migration Ontology",
+      "slug": "rodrigues2019turbidite",
+      "jsonPath": "rodrigues2019turbidite/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17417479385018395316.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "IT Infrastructure Model",
+      "slug": "it-infrastructure",
+      "jsonPath": "it-infrastructure/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "it-infrastructure/main.als"
+      ]
+    },
+    {
+      "modelName": "Ambient Assisted Living Ontology",
+      "slug": "moreira2018saref4health",
+      "jsonPath": "moreira2018saref4health/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6201530347041861640.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontological Model for Urinary Profiles and Events",
+      "slug": "rodrigues2017urinary-profiles",
+      "jsonPath": "rodrigues2017urinary-profiles/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3563096599915028086.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontology of Monotheism",
+      "slug": "mello2022monotheism",
+      "jsonPath": "mello2022monotheism/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "mello2022monotheism/main.als"
+      ]
+    },
+    {
+      "modelName": "OntoUML Examples",
+      "slug": "guizzardi2022ufo",
+      "jsonPath": "guizzardi2022ufo/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16727772443783361748.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Real Estate Model",
+      "slug": "real-estate-ontology",
+      "jsonPath": "real-estate-ontology/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "real-estate-ontology/main.als"
+      ]
+    },
+    {
+      "modelName": "Software Process Ontology",
+      "slug": "spo2017",
+      "jsonPath": "spo2017/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2877615742434176558.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontological Analysis of REA",
+      "slug": "guarino2018rea",
+      "jsonPath": "guarino2018rea/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "guarino2018rea/main.als"
+      ]
+    },
+    {
+      "modelName": "Online Mentoring Model",
+      "slug": "online-mentoring",
+      "jsonPath": "online-mentoring/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "online-mentoring/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontology for Emergency Plans",
+      "slug": "ferreira2015ontoemergeplan",
+      "jsonPath": "ferreira2015ontoemergeplan/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-12366476495919204676.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "REA Ontology",
+      "slug": "laurier2018rea",
+      "jsonPath": "laurier2018rea/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "laurier2018rea/main.als"
+      ]
+    },
+    {
+      "modelName": "Common Ontology of Value and Risk",
+      "slug": "sales2018cover",
+      "jsonPath": "sales2018cover/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "sales2018cover/main.als"
+      ]
+    },
+    {
+      "modelName": "Plato Ontology",
+      "slug": "plato-ontology2019",
+      "jsonPath": "plato-ontology2019/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2417182125078260180.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Bank Model",
+      "slug": "bank-model",
+      "jsonPath": "bank-model/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-715784387469586338.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Internship Ontology",
+      "slug": "internship",
+      "jsonPath": "internship/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6825440222835857460.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Predictive System for University Admissions \"UniMatch\"",
+      "slug": "unimatch-ontology2022",
+      "jsonPath": "unimatch-ontology2022/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "unimatch-ontology2022/main.als"
+      ]
+    },
+    {
+      "modelName": "SRRO Ontology",
+      "slug": "srro-ontology",
+      "jsonPath": "srro-ontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-3694179479002417046.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Reference Ontology of Money and Virtual Currencies",
+      "slug": "amaral2020rome",
+      "jsonPath": "amaral2020rome/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-15973722712924482646.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontology for Value Networks with Geographic Information",
+      "slug": "aires2022valuenetworks-geo",
+      "jsonPath": "aires2022valuenetworks-geo/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6036646473949387618.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Aviation Safety Ontology",
+      "slug": "kostov2017towards",
+      "jsonPath": "kostov2017towards/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "kostov2017towards/main.als"
+      ]
+    },
+    {
+      "modelName": "Gameplay Ontology",
+      "slug": "duarte2020jogabilidade",
+      "jsonPath": "duarte2020jogabilidade/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2562943250480242335.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Online Education Ontology",
+      "slug": "sikora2021online-education",
+      "jsonPath": "sikora2021online-education/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "sikora2021online-education/main.als"
+      ]
+    },
+    {
+      "modelName": "Relational Database System Ontology",
+      "slug": "aguiar2018rdbs-o",
+      "jsonPath": "aguiar2018rdbs-o/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "aguiar2018rdbs-o/main.als"
+      ]
+    },
+    {
+      "modelName": "Agriculture Operations Task Ontology",
+      "slug": "abrahao2018agriculture-operations",
+      "jsonPath": "abrahao2018agriculture-operations/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1638903234236528097.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "OntoTrans",
+      "slug": "pereira2020ontotrans",
+      "jsonPath": "pereira2020ontotrans/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "pereira2020ontotrans/main.als"
+      ]
+    },
+    {
+      "modelName": "Conceptual Schema of Human Genome",
+      "slug": "martinez2013human-genome",
+      "jsonPath": "martinez2013human-genome/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17228179331256470902.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "OntoCovid",
+      "slug": "maddalena2021ontocovid",
+      "jsonPath": "maddalena2021ontocovid/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "maddalena2021ontocovid/main.als"
+      ]
+    },
+    {
+      "modelName": "Value Ascription Ontology",
+      "slug": "andersson2018value-ascription",
+      "jsonPath": "andersson2018value-ascription/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "andersson2018value-ascription/main.als"
+      ]
+    },
+    {
+      "modelName": "Competence Reference Ontology",
+      "slug": "core-o2023",
+      "jsonPath": "core-o2023/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "core-o2023/main.als"
+      ]
+    },
+    {
+      "modelName": "Public Expense Ontology",
+      "slug": "public-expense-ontology2020",
+      "jsonPath": "public-expense-ontology2020/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "public-expense-ontology2020/main.als"
+      ]
+    },
+    {
+      "modelName": "Value Ascription Ontology",
+      "slug": "guarino2016value",
+      "jsonPath": "guarino2016value/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "guarino2016value/main.als"
+      ]
+    },
+    {
+      "modelName": "Non-Consensual Pornography Phenomenon",
+      "slug": "falduci2022non-consensual-pornography",
+      "jsonPath": "falduci2022non-consensual-pornography/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "falduci2022non-consensual-pornography/main.als"
+      ]
+    },
+    {
+      "modelName": "Quality Assurance Process Ontology",
+      "slug": "quality-assurance-process-ontology2017",
+      "jsonPath": "quality-assurance-process-ontology2017/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "quality-assurance-process-ontology2017/main.als"
+      ]
+    },
+    {
+      "modelName": "Aviation Safety Ontology",
+      "slug": "ahmad2018aviation",
+      "jsonPath": "ahmad2018aviation/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "ahmad2018aviation/main.als"
+      ]
+    },
+    {
+      "modelName": "DSSApple Ontology",
+      "slug": "niederkofler2019dssapple",
+      "jsonPath": "niederkofler2019dssapple/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7850989771146497235.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Experiment Model",
+      "slug": "experiment2013",
+      "jsonPath": "experiment2013/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "experiment2013/main.als"
+      ]
+    },
+    {
+      "modelName": "Generic Idea and Innovation Management Ontology Refactored",
+      "slug": "gi2mo",
+      "jsonPath": "gi2mo/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-18000587771350572399.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Library Ontology",
+      "slug": "library",
+      "jsonPath": "library/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "library/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontology of Security from a Risk Treatment Perspective",
+      "slug": "oliveira2022rose",
+      "jsonPath": "oliveira2022rose/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "oliveira2022rose/main.als"
+      ]
+    },
+    {
+      "modelName": "Campus Management System Reference Data Model",
+      "slug": "carolla2014campus-management",
+      "jsonPath": "carolla2014campus-management/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "carolla2014campus-management/main.als"
+      ]
+    },
+    {
+      "modelName": "Quality Assurance Model",
+      "slug": "qam",
+      "jsonPath": "qam/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "qam/main.als"
+      ]
+    },
+    {
+      "modelName": "Design Science Artifact Ontology",
+      "slug": "weigand2021artifact",
+      "jsonPath": "weigand2021artifact/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "weigand2021artifact/main.als"
+      ]
+    },
+    {
+      "modelName": "Robotic Strolling System",
+      "slug": "zhou2017hazard-ontology-robotic-strolling",
+      "jsonPath": "zhou2017hazard-ontology-robotic-strolling/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "zhou2017hazard-ontology-robotic-strolling/main.als"
+      ]
+    },
+    {
+      "modelName": "Towards a collaboration ontology",
+      "slug": "oliveira2007collaboration",
+      "jsonPath": "oliveira2007collaboration/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "oliveira2007collaboration/main.als"
+      ]
+    },
+    {
+      "modelName": "Hazard Ontology",
+      "slug": "zhou2017hazard",
+      "jsonPath": "zhou2017hazard/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "zhou2017hazard/main.als"
+      ]
+    },
+    {
+      "modelName": "Petroleum System Model",
+      "slug": "abel2015petroleum-system",
+      "jsonPath": "abel2015petroleum-system/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "abel2015petroleum-system/main.als"
+      ]
+    },
+    {
+      "modelName": "Egyptian E-Government Conceptual Model",
+      "slug": "haridy2021egyptian-e-government",
+      "jsonPath": "haridy2021egyptian-e-government/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "haridy2021egyptian-e-government/main.als"
+      ]
+    },
+    {
+      "modelName": "EU-Rent Car Rentals Refactored",
+      "slug": "eu-rent-refactored2022",
+      "jsonPath": "eu-rent-refactored2022/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1739982986164926745.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Dysfuntion Analysis Ontology",
+      "slug": "debbech2020dysfunction-analysis",
+      "jsonPath": "debbech2020dysfunction-analysis/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "debbech2020dysfunction-analysis/main.als"
+      ]
+    },
+    {
+      "modelName": "Brand Identity Ontology",
+      "slug": "elikan2018brand-identity",
+      "jsonPath": "elikan2018brand-identity/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:120703:19)\n    at transformDerivationRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:121320:58)\n    at transformRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:121249:9)\n    at Ontouml2Alloy2.transformRelations (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:121841:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:121676:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-16958182464577856744.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontological Viral Conceptual Model",
+      "slug": "bernasconi2021ontovcm",
+      "jsonPath": "bernasconi2021ontovcm/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6973412431774802940.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Public Administration Ontology Model",
+      "slug": "repa2021public-administration",
+      "jsonPath": "repa2021public-administration/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "repa2021public-administration/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontology for Scientific Publishing",
+      "slug": "andrade2023integracao",
+      "jsonPath": "andrade2023integracao/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:109991\n          throw new Error(\"Generalization set involving distinct general classifiers\");\n          ^\n\nError: Generalization set involving distinct general classifiers\n    at _GeneralizationSet.getGeneral (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:109991:17)\n    at _GeneralizationSet.getGeneralClass (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:110006:21)\n    at transformGeneralizationSet (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:121217:29)\n    at Ontouml2Alloy2.transformGeneralizationSets (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:121835:44)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:121674:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-2675807515610190022.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Ontologia de Doação de Órgão e Tecidos",
+      "slug": "pereira2015doacao-orgaos",
+      "jsonPath": "pereira2015doacao-orgaos/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "pereira2015doacao-orgaos/main.als"
+      ]
+    },
+    {
+      "modelName": "Reference Ontology of Trust",
+      "slug": "amaral2019rot",
+      "jsonPath": "amaral2019rot/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-6927206333021406585.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Customer Relationship, Intelligence and Experiences Ontology",
+      "slug": "fernandez-cejas2022curie-o",
+      "jsonPath": "fernandez-cejas2022curie-o/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "fernandez-cejas2022curie-o/main.als"
+      ]
+    },
+    {
+      "modelName": "G.809 Model",
+      "slug": "g809-2015",
+      "jsonPath": "g809-2015/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "g809-2015/main.als"
+      ]
+    },
+    {
+      "modelName": "Modular Construction Ontology",
+      "slug": "van-ee2021modular",
+      "jsonPath": "van-ee2021modular/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-7144644189187957296.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Examples of Multi-level Modeling",
+      "slug": "fonseca2022incorporating",
+      "jsonPath": "fonseca2022incorporating/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14265535488483197595.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Reference Ontology of Ethical Requirements",
+      "slug": "amaral2022ethical-requirements",
+      "jsonPath": "amaral2022ethical-requirements/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "amaral2022ethical-requirements/main.als"
+      ]
+    },
+    {
+      "modelName": "Software Development Project Ontology",
+      "slug": "jacobs2022sdpontology",
+      "jsonPath": "jacobs2022sdpontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13073437804297780516.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Weathering Ontology",
+      "slug": "vieira2020weathering",
+      "jsonPath": "vieira2020weathering/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:120703:19)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:120915:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14032874754108000490.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Decision Making Ontology Extended with Intuitive Decision Making",
+      "slug": "ramos2021bias",
+      "jsonPath": "ramos2021bias/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: {\"errors\":[\"Invalid input model: could not parse/deserialize OntoUML JSON.\"]}",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Internal Affairs Ontology",
+      "slug": "internal-affairs2013",
+      "jsonPath": "internal-affairs2013/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-5563591186336713360.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "User Feedback Ontology",
+      "slug": "ramirez2015userfeedback",
+      "jsonPath": "ramirez2015userfeedback/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "ramirez2015userfeedback/main.als"
+      ]
+    },
+    {
+      "modelName": "Normative Acts",
+      "slug": "barcelos2013normative-acts",
+      "jsonPath": "barcelos2013normative-acts/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1755314655419543855.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Configuration Management Process Ontology",
+      "slug": "cmpo2017",
+      "jsonPath": "cmpo2017/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "cmpo2017/main.als"
+      ]
+    },
+    {
+      "modelName": "Medical Appointment Ontology",
+      "slug": "valaski2020medical-appointment",
+      "jsonPath": "valaski2020medical-appointment/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14262359220896619940.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Electrocardiogram (ECG) Ontology",
+      "slug": "goncalves2011ecg",
+      "jsonPath": "goncalves2011ecg/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:111446\n          throw new Error(\"Unable to retrieve source end on a non-binary relation\");\n          ^\n\nError: Unable to retrieve source end on a non-binary relation\n    at _Relation.getDerivingRelationEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:111446:17)\n    at _Relation.getDerivingRelation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:111501:21)\n    at isMaterialConnectedToDerivation (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:120793:52)\n    at transformRelationSourceEnd (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:120917:53)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:120845:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-4393474233593004414.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "OntoBio",
+      "slug": "albuquerque2011ontobio",
+      "jsonPath": "albuquerque2011ontobio/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-14315210866307175355.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "FreshBZ Application UML",
+      "slug": "freshbz2023",
+      "jsonPath": "freshbz2023/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "freshbz2023/main.als"
+      ]
+    },
+    {
+      "modelName": "NWPOntology",
+      "slug": "neves2020nwpontology",
+      "jsonPath": "neves2020nwpontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:120703:19)\n    at transformDatatypeAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:120979:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:120829:9)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17714842694144551449.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "MAS/LUCC Domain Ontology (excerpt - the agents\u0027 layer)",
+      "slug": "grueau2013towards",
+      "jsonPath": "grueau2013towards/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "grueau2013towards/main.als"
+      ]
+    },
+    {
+      "modelName": "Public Tender Model",
+      "slug": "public-tender",
+      "jsonPath": "public-tender/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-8019198749791552560.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Capacity-Based Activity-Based Costing System Model",
+      "slug": "fraller2019abc",
+      "jsonPath": "fraller2019abc/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-17472462175070985725.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Non-Functional Requirements Ontology",
+      "slug": "guizzardi2014nfr",
+      "jsonPath": "guizzardi2014nfr/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "guizzardi2014nfr/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontology of Nationality according to the Federal Constitution of Brazil",
+      "slug": "barros2020programming",
+      "jsonPath": "barros2020programming/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "barros2020programming/main.als"
+      ]
+    },
+    {
+      "modelName": "Ontology for Concerns",
+      "slug": "junior2018o4c",
+      "jsonPath": "junior2018o4c/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-1714791673407931892.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Recommendation Ontology",
+      "slug": "recommendation-ontology",
+      "jsonPath": "recommendation-ontology/ontology.json",
+      "ok": false,
+      "error": "ontouml2alloy-transformation exited with code 1\nstdout: \nstderr: /private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:120703\n      if (element.id in transformer2.normalizedNames) {\n                  ^\n\nTypeError: Cannot read properties of null (reading \u0027id\u0027)\n    at getNormalizedName (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:120703:19)\n    at transformGeneralAttribute (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:120882:56)\n    at transformProperty (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:120838:11)\n    at Ontouml2Alloy2.transformProperties (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:121848:35)\n    at Ontouml2Alloy2.transform (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:121675:14)\n    at Ontouml2Alloy2.run (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:121852:14)\n    at Object.\u003canonymous\u003e (/private/var/folders/1m/891j7ggj52n5m_kdc03rwd8h0000gn/T/ontouml2alloy-cli-13697138880177489874.js:121922:17)\n\u001b[90m    at Module._compile (node:internal/modules/cjs/loader:1760:14)\u001b[39m\n\u001b[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)\u001b[39m\n\u001b[90m    at Module.load (node:internal/modules/cjs/loader:1480:32)\u001b[39m\n\nNode.js v25.3.0",
+      "outputFiles": []
+    },
+    {
+      "modelName": "Brazilian Federal Organizational Structures - Ontology Draft",
+      "slug": "brazilian-governmental-organizational-structures",
+      "jsonPath": "brazilian-governmental-organizational-structures/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "brazilian-governmental-organizational-structures/main.als"
+      ]
+    },
+    {
+      "modelName": "Digital Technology",
+      "slug": "gomes2022digital-technology",
+      "jsonPath": "gomes2022digital-technology/ontology.json",
+      "ok": true,
+      "outputFiles": [
+        "gomes2022digital-technology/main.als"
+      ]
+    }
+  ],
+  "summary": {
+    "ok": 82,
+    "failed": 61
+  }
+}
