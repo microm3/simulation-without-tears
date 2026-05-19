@@ -81,10 +81,10 @@ object App {
             }
 
             is ScenarioOutcome.UseExisting -> {
-                val module = existingModule ?: return
+                val module = existingModule ?: exitProcess(0)
                 val command =
                     module.allCommands.firstOrNull { it.label == outcome.commandLabel }
-                        ?: return
+                        ?: exitProcess(0)
                 val stored = lookupStoredUserConstraint(userConstraintsPath, outcome.commandLabel)
                 val naturalLanguage =
                     stored?.naturalLanguage?.takeIf { it.isNotBlank() }
