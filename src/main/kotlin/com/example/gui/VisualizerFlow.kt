@@ -12,6 +12,7 @@ import edu.mit.csail.sdg.translator.A4Solution
 import java.nio.file.Path
 import javax.swing.JButton
 import javax.swing.SwingUtilities
+import javax.swing.WindowConstants
 
 /** Swing layer: runs [solveCommand], then opens the Alloy visualizer on SAT or a small UNSAT dialog. */
 fun launchVisualizer(
@@ -77,7 +78,10 @@ private fun showLauncherWindow(
             content = preview,
             alwaysOnTop = true,
             buttons = buttons,
-        ).isVisible = true
+        ).apply {
+            defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
+            isVisible = true
+        }
 }
 
 private fun nextInstanceButton(controller: SolutionController): JButton =

@@ -18,6 +18,7 @@ import com.example.transformation.prepareAlloyModel
 import java.nio.file.Path
 import java.nio.file.Paths
 import kotlin.io.path.exists
+import kotlin.system.exitProcess
 
 object App {
     private const val ALLOW_ABSTRACT_LEAVES_FLAG = "--allow-abstract-leaf-instances"
@@ -29,7 +30,7 @@ object App {
         val cliInput: Path? = if (pathCount >= 1) cliPath(args[0]) else null
         val cliOutputDir: Path? = if (pathCount >= 2) cliPath(args[1]) else null
 
-        val inputFile: Path = cliInput ?: pickModelFile() ?: return
+        val inputFile: Path = cliInput ?: pickModelFile() ?: exitProcess(0)
         val isJsonInput = inputFile.toString().endsWith(".json")
         val allowAbstractLeafInstances: Boolean =
             when {
@@ -63,9 +64,7 @@ object App {
         val parseChecker = { text: String -> parseCheckConstraint(modelPath.parent, text) }
 
         when (val outcome = ScenarioDialog.show(modelMetadata, existingRunCommands, parseChecker)) {
-            null -> {
-                return
-            }
+            null -> exitProcess(0)
 
             is ScenarioOutcome.Apply -> {
                 val userPath = appendUserConstraint(modelPath.parent, outcome.result.predicateText)
