@@ -9,10 +9,14 @@ Kotlin/Maven tool to support simulation of OntoUML models.
 
 3. **Solving and visualisation**: the configured constraint is appended to the model and solved with the Alloy Analyzer (using the default solver SAT4J). Satisfying instances are shown in the Alloy VizGUI with the generated theme applied. The user can step through further instances or re-run a different scenario.
 
+## Download
+
+A pre-built JAR is available at [`target/simulation-without-tears-1.0-SNAPSHOT.jar`](target/simulation-without-tears-1.0-SNAPSHOT.jar). If you use the JAR, jump directly to [Running](#running) below.
+
 ## Prerequisites
 
 - **Java 17** or later
-- **Node.js 18** or later (required at runtime for OntoUML to Alloy transformation; while the ontouml-js `ontouml2alloy` library is bundled in the JAR, Node.js itself must be on the PATH)
+- **Node.js 18** or later (required at runtime for OntoUML to Alloy transformation; while the ontouml-js `ontouml2alloy` library is bundled in the JAR, Node.js must be on the PATH)
 
 ## Building from source
 
