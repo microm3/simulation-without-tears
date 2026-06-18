@@ -32,4 +32,6 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
 fi
 popd >/dev/null
 
+echo "${SHA}${DIRTY}" > "$RES_DIR/VERSION"
+
 echo "Refreshed ontouml2alloy bundle from ontouml-js@${SHA}${DIRTY}"
