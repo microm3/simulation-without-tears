@@ -404,7 +404,7 @@
         "guards": {
           "worldScope": 2,
           "nonEmptyClasses": {
-            "scope": "per_world",
+            "scope": "some_world",
             "classes": [
               "class_name"
             ]
@@ -1003,7 +1003,7 @@
         "guards": {
           "worldScope": 2,
           "nonEmptyClasses": {
-            "scope": "per_world",
+            "scope": "some_world",
             "classes": [
               "class_name"
             ]
@@ -1030,7 +1030,7 @@
         "guards": {
           "worldScope": "<<world_count>>",
           "nonEmptyClasses": {
-            "scope": "per_world",
+            "scope": "some_world",
             "classes": [
               "class1"
             ]
@@ -1210,7 +1210,7 @@
         "guards": {
           "worldScope": "<<world_count>>",
           "nonEmptyClasses": {
-            "scope": "per_world",
+            "scope": "some_world",
             "classes": [
               "class1"
             ]
@@ -1384,7 +1384,7 @@
         "guards": {
           "worldScope": "<<world_count>>",
           "nonEmptyClasses": {
-            "scope": "per_world",
+            "scope": "some_world",
             "classes": [
               "class_name"
             ]
