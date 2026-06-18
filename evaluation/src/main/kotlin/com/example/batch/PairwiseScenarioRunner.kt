@@ -69,7 +69,7 @@ object PairwiseScenarioRunner {
                     }
                     .filter { it.second.isNotEmpty() }
 
-    val tuples = enumerateTuples(cases, combineSize, policy)
+    val tuples = enumerateTuples(cases, policy)
     println(
             "k=$combineSize policy=$policy sharing=$classSharing cases=$casesPerScenario, ${tuples.size} tuples across ${cases.size} scenarios",
     )
