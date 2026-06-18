@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Classic">
+
+<projection> <type name="World"/> </projection>
+
+<defaultnode hideunconnected="yes"/>
+
+<defaultedge/>
+
+<node shape="Box" color="White">
+   <type name="Datatype"/>
+</node>
+
+<node shape="Box" color="Blue">
+   <set name="Skill" type="Aspect"/>
+</node>
+
+<node shape="Box" color="Gray">
+   <set name="SocialEntity" type="Object"/>
+</node>
+
+<node shape="Box" color="Green">
+   <set name="Employment" type="Aspect"/>
+</node>
+
+<node shape="Box" color="Red">
+   <set name="ActiveOrganization" type="Object"/>
+   <set name="Employee" type="Object"/>
+   <set name="InactiveOrganization" type="Object"/>
+   <set name="Organization" type="Object"/>
+   <set name="Person" type="Object"/>
+</node>
+
+<node visible="yes" hideunconnected="no" showlabel="no">
+   <set name="exists" type="Endurant"/>
+</node>
+
+</view>
+
+</alloy>

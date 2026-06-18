@@ -1,0 +1,58 @@
+{
+  "description": "Targets and properties used in the original scenario combination policy. Combinations of scenarios with same target AND same property were disallowed. The 'groups' map maps the combinations disallowed under that policy to the currently used exclusiong_groups, to test the old policy in the latest pipeline.",
+  "targets": [
+    "worlds",
+    "individuals",
+    "class",
+    "class_comparison",
+    "association"
+  ],
+  "properties": [
+    "structure",
+    "cardinality",
+    "coverage",
+    "dynamics",
+    "rigidity",
+    "overlap"
+  ],
+  "classifications": {
+    "linear_branch":                   { "target": "worlds",            "property": "structure"   },
+    "alternative_futures":             { "target": "worlds",            "property": "structure"   },
+    "counterfactual_worlds":           { "target": "worlds",            "property": "structure"   },
+    "branch_depth":                    { "target": "worlds",            "property": "cardinality" },
+    "population_size":                 { "target": "individuals",       "property": "cardinality" },
+    "universal_coverage":              { "target": "individuals",       "property": "coverage"    },
+    "population_variability":          { "target": "individuals",       "property": "dynamics"    },
+    "population_growth":               { "target": "individuals",       "property": "dynamics"    },
+    "extension_size":                  { "target": "class",             "property": "cardinality" },
+    "temporal_extension_size":         { "target": "class",             "property": "cardinality" },
+    "focus_neighborhood_coverage":     { "target": "class",             "property": "coverage"    },
+    "extension_variability":           { "target": "class",             "property": "dynamics"    },
+    "mandatory_antirigidity":          { "target": "class",             "property": "rigidity"    },
+    "pseudo_rigid":                    { "target": "class",             "property": "rigidity"    },
+    "extension_size_comparison":       { "target": "class_comparison",  "property": "cardinality" },
+    "extension_comparison":            { "target": "class_comparison",  "property": "overlap"     },
+    "multiple_instantiation":          { "target": "class_comparison",  "property": "overlap"     },
+    "temporal_multiple_instantiation": { "target": "class_comparison",  "property": "overlap"     },
+    "exclusive_instantiation":         { "target": "class_comparison",  "property": "overlap"     },
+    "cardinality_value":               { "target": "association",       "property": "cardinality" },
+    "universal_association_coverage":  { "target": "association",       "property": "coverage"    },
+    "association_depth":               { "target": "association",       "property": "structure"   },
+    "association_changeability":       { "target": "association",       "property": "dynamics"    }
+  },
+  "groups": {
+    "linear_branch":                   "cell_worlds__structure",
+    "alternative_futures":             "cell_worlds__structure",
+    "counterfactual_worlds":           "cell_worlds__structure",
+    "population_variability":          "cell_individuals__dynamics",
+    "population_growth":               "cell_individuals__dynamics",
+    "extension_size":                  "cell_class__cardinality",
+    "temporal_extension_size":         "cell_class__cardinality",
+    "mandatory_antirigidity":          "cell_class__rigidity",
+    "pseudo_rigid":                    "cell_class__rigidity",
+    "extension_comparison":            "cell_class_comparison__overlap",
+    "multiple_instantiation":          "cell_class_comparison__overlap",
+    "temporal_multiple_instantiation": "cell_class_comparison__overlap",
+    "exclusive_instantiation":         "cell_class_comparison__overlap"
+  }
+}
