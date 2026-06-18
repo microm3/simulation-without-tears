@@ -255,8 +255,7 @@ class ScenarioDialog private constructor(
         if (canAdd) {
             combineRow.add(
                 JButton("Combine with another constraint").apply {
-                    toolTipText = "Add a second scenario whose target/property differs from the ones above; " +
-                        "their bodies will be merged into a single Alloy predicate."
+                    toolTipText = "Add a second scenario to combine with the previous one(s)."
                     addActionListener { addCombinedPanel() }
                 },
                 "growx",
