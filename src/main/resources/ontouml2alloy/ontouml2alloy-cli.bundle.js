@@ -109105,7 +109105,7 @@ var require_ontouml_element = __commonJS({
         this.name.addText(value, language);
       }
       setName(value, language) {
-        this.name = new _2.MultilingualText(value);
+        this.name = new _2.MultilingualText(value, language);
       }
       getDescription(language) {
         return this.description.getText(language);
@@ -109115,7 +109115,7 @@ var require_ontouml_element = __commonJS({
         this.description.addText(value, language);
       }
       setDescription(value, language) {
-        this.description = new _2.MultilingualText(value);
+        this.description = new _2.MultilingualText(value, language);
       }
       getNameOrId(language) {
         return this.getName(language) || this.id;
@@ -109158,6 +109158,34 @@ var require_ontouml_element = __commonJS({
           }
         });
         return object;
+      }
+      /** Resolve fields containing references (i.e., not contents) replacing the
+       * object with the instance of `OntoumlElement` in `elementReferenceMap` with
+       * the same `id`. This method is NOT recursive.
+       *
+       * @throws throws an error when no entry in the `elementReferenceMap` has a
+       * matching `id`.
+       *
+       * @param elementReferenceMap id-based map of all instances of
+       * `OntoumlElement` in the same context or project. */
+      /** Support method the returns an instance of `OntoumlElement` from a element
+       * map based on the reference's id throwing an broken reference exception in
+       * case an element with matching id is not found in the map.
+       *
+       * @throws Error accusing broken reference if a element with matching id is
+       * not found in the map */
+      static resolveReference(reference, elementReferenceMap, container, field) {
+        if (!reference) {
+          return reference;
+        }
+        const elementId = reference === null || reference === void 0 ? void 0 : reference.id;
+        const element = elementReferenceMap.get(elementId);
+        if (element) {
+          return element;
+        } else {
+          const message = container && field ? `Could not resolve broken reference '${field}' in ${container.constructor.name} '${container.id}'.` : `Could not resolve broken reference.`;
+          throw new Error(message);
+        }
       }
     };
     exports2.OntoumlElement = OntoumlElement;
@@ -109220,6 +109248,8 @@ var require_model_element = __commonJS({
         } else {
           return null;
         }
+      }
+      resolveReferences(_elementReferenceMap) {
       }
       removeSelfFromContainer() {
         if (this.container && this.container instanceof _.Package) {
@@ -109939,6 +109969,19 @@ var require_generalization = __commonJS({
         generalizationSerialization.specific = specific ? specific.getReference() : null;
         return generalizationSerialization;
       }
+      resolveReferences(elementReferenceMap) {
+        super.resolveReferences(elementReferenceMap);
+        const {
+          general,
+          specific
+        } = this;
+        if (general) {
+          this.general = _.OntoumlElement.resolveReference(general, elementReferenceMap, this, "general");
+        }
+        if (specific) {
+          this.specific = _.OntoumlElement.resolveReference(specific, elementReferenceMap, this, "specific");
+        }
+      }
     };
     exports2.Generalization = Generalization;
   }
@@ -109978,6 +110021,9 @@ var require_generalization_set = __commonJS({
       }
       isPhasePartition() {
         return this.isPartition() && this.involvesClasses() && (this.getSpecificClasses().every((specific) => specific.hasPhaseStereotype()) && this.getGeneralClass().hasSortalStereotype() || this.getSpecificClasses().every((specific) => specific.hasPhaseMixinStereotype()) && this.getGeneralClass().hasCategoryStereotype());
+      }
+      isSubkindPartition() {
+        return this.isPartition() && this.involvesClasses() && this.getSpecificClasses().every((specific) => specific.hasSubkindStereotype()) && this.getGeneralClass().hasSortalStereotype();
       }
       /**
        * @throws exception if different generals are present
@@ -110083,6 +110129,19 @@ var require_generalization_set = __commonJS({
         object.categorizer = this.categorizer && this.categorizer.getReference();
         object.generalizations = this.generalizations ? [...this.generalizations].map((generalization) => generalization.getReference()) : null;
         return object;
+      }
+      resolveReferences(elementReferenceMap) {
+        super.resolveReferences(elementReferenceMap);
+        const {
+          categorizer,
+          generalizations
+        } = this;
+        if (categorizer) {
+          this.categorizer = _.OntoumlElement.resolveReference(categorizer, elementReferenceMap, this, "categorizer");
+        }
+        if (Array.isArray(generalizations)) {
+          this.generalizations = generalizations.map((generalization) => _.OntoumlElement.resolveReference(generalization, elementReferenceMap, this, "generalizations"));
+        }
       }
     };
     exports2.GeneralizationSet = GeneralizationSet;
@@ -110341,6 +110400,30 @@ var require_project = __commonJS({
       getAllLiterals() {
         return this.model.getAllLiterals();
       }
+      getAllClassViews() {
+        return this.diagrams.flatMap((diagram) => diagram.getClassViews());
+      }
+      getAllRelationViews() {
+        return this.diagrams.flatMap((diagram) => diagram.getRelationViews());
+      }
+      getAllGeneralizationViews() {
+        return this.diagrams.flatMap((diagram) => diagram.getGeneralizationViews());
+      }
+      getAllGeneralizationSetViews() {
+        return this.diagrams.flatMap((diagram) => diagram.getGeneralizationSetViews());
+      }
+      getAllPackageViews() {
+        return this.diagrams.flatMap((diagram) => diagram.getPackageViews());
+      }
+      getAllRectangles() {
+        return this.diagrams.flatMap((diagram) => diagram.getRectangles());
+      }
+      getAllPaths() {
+        return this.diagrams.flatMap((diagram) => diagram.getPaths());
+      }
+      getAllTexts() {
+        return this.diagrams.flatMap((diagram) => diagram.getTexts());
+      }
       getAllModelElements() {
         return this.getAllContents().filter((e) => e instanceof _.ModelElement);
       }
@@ -110455,6 +110538,24 @@ var require_project = __commonJS({
       getClassesByNature() {
         throw new Error("Method unimplemented!");
       }
+      getNonSortals() {
+        let classes = this.project.getClassesWithRoleMixinStereotype();
+        classes = classes.concat(this.project.getClassesWithMixinStereotype());
+        classes = classes.concat(this.project.getClassesWithCategoryStereotype());
+        classes = classes.concat(this.project.getClassesWithPhaseMixinStereotype());
+        return classes;
+      }
+      getMediations(_class) {
+        const relations = this.getAllRelations();
+        let mediations = [];
+        var i;
+        for (i in relations) {
+          if (relations[i].involves(_class) && relations[i].hasMediationStereotype()) {
+            mediations = mediations.concat(relations[i]);
+          }
+        }
+        return mediations;
+      }
       toJSON() {
         const projectSerialization = {
           model: null,
@@ -110462,6 +110563,9 @@ var require_project = __commonJS({
         };
         Object.assign(projectSerialization, super.toJSON());
         return projectSerialization;
+      }
+      // No reference fields to resolve/replace
+      resolveReferences(_elementReferenceMap) {
       }
     };
     exports2.Project = Project;
@@ -111324,6 +111428,15 @@ var require_property = __commonJS({
         propertySerialization.propertyType = (_this$propertyType = this.propertyType) === null || _this$propertyType === void 0 ? void 0 : _this$propertyType.getReference();
         return propertySerialization;
       }
+      resolveReferences(elementReferenceMap) {
+        super.resolveReferences(elementReferenceMap);
+        const {
+          propertyType
+        } = this;
+        if (propertyType) {
+          this.propertyType = _.OntoumlElement.resolveReference(propertyType, elementReferenceMap, this, "propertyType");
+        }
+      }
     };
     exports2.Property = Property;
   }
@@ -111754,6 +111867,20 @@ var require_relation = __commonJS({
       getSituationEnd() {
         throw new Error("Method unimplemented!");
       }
+      /**
+       * Verify is a class participates in relation
+       * @param _class The classe to be verified
+       */
+      involves(_class) {
+        if (!this.isDerivation()) {
+          if (_class == this.getSourceClass() || _class == this.getTargetClass()) {
+            return true;
+          } else return false;
+        } else {
+          if (_class == this.getDerivedClass()) return true;
+        }
+        return false;
+      }
       // TODO: Bring in the relevant relations from Class
     };
     exports2.Relation = Relation;
@@ -111833,7 +111960,7 @@ var require_stereotypes = __commonJS({
     var SubstantialOnlyStereotypes = [ClassStereotype.KIND, ClassStereotype.QUANTITY, ClassStereotype.COLLECTIVE];
     var EndurantStereotypes = [...SortalStereotypes, ...NonSortalStereotypes];
     var AbstractStereotypes = [ClassStereotype.ABSTRACT, ClassStereotype.DATATYPE, ClassStereotype.ENUMERATION];
-    var ClassStereotypes = [...EndurantStereotypes, ...AbstractStereotypes, ClassStereotype.EVENT, ClassStereotype.SITUATION];
+    var ClassStereotypes = [...EndurantStereotypes, ...AbstractStereotypes, ClassStereotype.EVENT, ClassStereotype.SITUATION, ClassStereotype.TYPE];
     var RelationStereotypes = [RelationStereotype.MATERIAL, RelationStereotype.DERIVATION, RelationStereotype.COMPARATIVE, RelationStereotype.MEDIATION, RelationStereotype.CHARACTERIZATION, RelationStereotype.EXTERNAL_DEPENDENCE, RelationStereotype.COMPONENT_OF, RelationStereotype.MEMBER_OF, RelationStereotype.SUBCOLLECTION_OF, RelationStereotype.SUBQUANTITY_OF, RelationStereotype.INSTANTIATION, RelationStereotype.TERMINATION, RelationStereotype.PARTICIPATIONAL, RelationStereotype.PARTICIPATION, RelationStereotype.HISTORICAL_DEPENDENCE, RelationStereotype.CREATION, RelationStereotype.MANIFESTATION, RelationStereotype.BRINGS_ABOUT, RelationStereotype.TRIGGERS];
     var ExistentialDependentSourceRelationStereotypes = [RelationStereotype.BRINGS_ABOUT, RelationStereotype.CREATION, RelationStereotype.MANIFESTATION, RelationStereotype.PARTICIPATION, RelationStereotype.PARTICIPATIONAL, RelationStereotype.TERMINATION, RelationStereotype.TRIGGERS];
     var ExistentialDependentTargetRelationStereotypes = [RelationStereotype.BRINGS_ABOUT, RelationStereotype.CHARACTERIZATION, RelationStereotype.CREATION, RelationStereotype.EXTERNAL_DEPENDENCE, RelationStereotype.HISTORICAL_DEPENDENCE, RelationStereotype.MEDIATION, RelationStereotype.PARTICIPATIONAL];
@@ -111976,14 +112103,16 @@ var require_natures = __commonJS({
       OntologicalNature2["type"] = "type";
       OntologicalNature2["abstract"] = "abstract";
     })(OntologicalNature || (exports2.OntologicalNature = OntologicalNature = {}));
+    var Natures = [OntologicalNature.functional_complex, OntologicalNature.collective, OntologicalNature.quantity, OntologicalNature.intrinsic_mode, OntologicalNature.extrinsic_mode, OntologicalNature.quality, OntologicalNature.relator, OntologicalNature.event, OntologicalNature.situation, OntologicalNature.type, OntologicalNature.abstract];
     var EndurantNatures = [OntologicalNature.functional_complex, OntologicalNature.collective, OntologicalNature.quantity, OntologicalNature.intrinsic_mode, OntologicalNature.extrinsic_mode, OntologicalNature.quality, OntologicalNature.relator];
     var SubstantialNatures = [OntologicalNature.functional_complex, OntologicalNature.collective, OntologicalNature.quantity];
     var MomentNatures = [OntologicalNature.intrinsic_mode, OntologicalNature.extrinsic_mode, OntologicalNature.quality, OntologicalNature.relator];
     var IntrinsicMomentNatures = [OntologicalNature.intrinsic_mode, OntologicalNature.quality];
     var ExtrinsicMomentNatures = [OntologicalNature.extrinsic_mode, OntologicalNature.relator];
-    var naturesArrays = [EndurantNatures, SubstantialNatures, MomentNatures, IntrinsicMomentNatures, ExtrinsicMomentNatures];
+    var naturesArrays = [Natures, EndurantNatures, SubstantialNatures, MomentNatures, IntrinsicMomentNatures, ExtrinsicMomentNatures];
     naturesArrays.forEach((array) => Object.freeze(array));
     var natureUtils = {
+      Natures,
       EndurantNatures,
       SubstantialNatures,
       MomentNatures,
@@ -112061,6 +112190,9 @@ var require_shape = __commonJS({
     var Shape = class extends _.DiagramElement {
       constructor(type, base) {
         super(type, base);
+      }
+      // No reference fields to resolve/replace
+      resolveReferences(_elementReferenceMap) {
       }
     };
     exports2.Shape = Shape;
@@ -112198,6 +112330,9 @@ var require_path = __commonJS({
         return [];
       }
       moveTo(x, y) {
+        if (!this.points) {
+          this.points = [];
+        }
         this.points.push(new _.Point(x, y));
       }
       setPoints(points) {
@@ -112247,6 +112382,14 @@ var require_element_view = __commonJS({
         Object.assign(serialization, super.toJSON());
         serialization.modelElement = (_this$modelElement = this.modelElement) === null || _this$modelElement === void 0 ? void 0 : _this$modelElement.getReference();
         return serialization;
+      }
+      resolveReferences(elementReferenceMap) {
+        const {
+          modelElement
+        } = this;
+        if (modelElement) {
+          this.modelElement = _.OntoumlElement.resolveReference(modelElement, elementReferenceMap, this, "modelElement");
+        }
       }
     };
     exports2.ElementView = ElementView;
@@ -112384,6 +112527,7 @@ var require_connector_view = __commonJS({
     exports2.ConnectorView = void 0;
     var _defineProperty2 = _interopRequireDefault(require_defineProperty());
     var _ = require_ontouml();
+    var _ontouml_element = require_ontouml_element();
     var ConnectorView = class extends _.ElementView {
       constructor(type, base) {
         super(type, base);
@@ -112405,6 +112549,19 @@ var require_connector_view = __commonJS({
         serialization.source = (_this$source = this.source) === null || _this$source === void 0 ? void 0 : _this$source.getReference();
         serialization.target = (_this$target = this.target) === null || _this$target === void 0 ? void 0 : _this$target.getReference();
         return serialization;
+      }
+      resolveReferences(elementReferenceMap) {
+        super.resolveReferences(elementReferenceMap);
+        const {
+          source,
+          target
+        } = this;
+        if (source) {
+          this.source = _ontouml_element.OntoumlElement.resolveReference(source, elementReferenceMap, this, "source");
+        }
+        if (target) {
+          this.target = _ontouml_element.OntoumlElement.resolveReference(target, elementReferenceMap, this, "target");
+        }
       }
     };
     exports2.ConnectorView = ConnectorView;
@@ -112464,6 +112621,9 @@ var require_diagram = __commonJS({
     exports2.Diagram = void 0;
     var _defineProperty2 = _interopRequireDefault(require_defineProperty());
     var _ = require_ontouml();
+    var _path = require_path();
+    var _rectangle = require_rectangle();
+    var _text = require_text();
     var Diagram = class extends _.OntoumlElement {
       constructor(base) {
         super(_.OntoumlType.DIAGRAM, base);
@@ -112491,8 +112651,25 @@ var require_diagram = __commonJS({
         var _this$contents4;
         return (_this$contents4 = this.contents) === null || _this$contents4 === void 0 ? void 0 : _this$contents4.filter((view) => view instanceof _.GeneralizationSetView);
       }
+      getPackageViews() {
+        var _this$contents5;
+        return (_this$contents5 = this.contents) === null || _this$contents5 === void 0 ? void 0 : _this$contents5.filter((view) => view instanceof _.PackageView);
+      }
       getRealizedModelElements() {
         return this.contents.map((view) => view.modelElement);
+      }
+      getShapes() {
+        var _this$contents6;
+        return ((_this$contents6 = this.contents) === null || _this$contents6 === void 0 ? void 0 : _this$contents6.map((view) => view.shape)) || [];
+      }
+      getRectangles() {
+        return this.getShapes().filter((s) => s instanceof _rectangle.Rectangle);
+      }
+      getPaths() {
+        return this.getShapes().filter((s) => s instanceof _path.Path);
+      }
+      getTexts() {
+        return this.getShapes().filter((s) => s instanceof _text.Text);
       }
       addElement(element) {
         if (!element) return;
@@ -112584,6 +112761,14 @@ var require_diagram = __commonJS({
         Object.assign(serialization, super.toJSON());
         serialization.owner = ((_this$owner = this.owner) === null || _this$owner === void 0 ? void 0 : _this$owner.getReference()) ?? null;
         return serialization;
+      }
+      resolveReferences(elementReferenceMap) {
+        const {
+          owner
+        } = this;
+        if (owner) {
+          this.owner = _.OntoumlElement.resolveReference(owner, elementReferenceMap, this, "owner");
+        }
       }
     };
     exports2.Diagram = Diagram;
@@ -119041,8 +119226,8 @@ var require_project_schema = __commonJS({
           ]
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "model", "diagrams"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119078,7 +119263,6 @@ var require_package_schema = __commonJS({
             },
             {
               type: "array",
-              minItems: 1,
               items: {
                 oneOf: [
                   {
@@ -119102,8 +119286,8 @@ var require_package_schema = __commonJS({
           ]
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "contents", "propertyAssignments"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119148,7 +119332,6 @@ var require_class_schema = __commonJS({
           oneOf: [
             {
               type: "array",
-              minItems: 1,
               items: {
                 $ref: "https://ontouml.org/ontouml-schema/2021-02-26/Literal"
               }
@@ -119167,10 +119350,8 @@ var require_class_schema = __commonJS({
             {
               type: "array",
               uniqueItems: true,
-              minItems: 1,
               items: {
-                type: "string",
-                minLength: 1
+                type: "string"
               }
             }
           ]
@@ -119188,23 +119369,8 @@ var require_class_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableString"
         }
       },
-      additionalProperties: false,
-      required: [
-        "type",
-        "id",
-        "name",
-        "description",
-        "propertyAssignments",
-        "stereotype",
-        "isAbstract",
-        "isDerived",
-        "properties",
-        "literals",
-        "restrictedTo",
-        "isExtensional",
-        "isPowertype",
-        "order"
-      ]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119246,8 +119412,8 @@ var require_relation_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#properties"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "stereotype", "propertyAssignments", "isAbstract", "isDerived", "properties"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119283,8 +119449,8 @@ var require_generalization_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#reference"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "propertyAssignments", "general", "specific"]
+      additionalProperties: true,
+      required: ["type", "id", "general", "specific"]
     };
   }
 });
@@ -119326,7 +119492,6 @@ var require_generalization_set_schema = __commonJS({
           oneOf: [
             {
               type: "array",
-              minItems: 1,
               items: {
                 $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#reference"
               }
@@ -119337,18 +119502,8 @@ var require_generalization_set_schema = __commonJS({
           ]
         }
       },
-      additionalProperties: false,
-      required: [
-        "type",
-        "id",
-        "name",
-        "description",
-        "propertyAssignments",
-        "isDisjoint",
-        "isComplete",
-        "categorizer",
-        "generalizations"
-      ]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119410,7 +119565,6 @@ var require_property_schema = __commonJS({
           oneOf: [
             {
               type: "array",
-              minItems: 1,
               uniqueItems: true,
               items: {
                 $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#reference"
@@ -119425,7 +119579,6 @@ var require_property_schema = __commonJS({
           oneOf: [
             {
               type: "array",
-              minItems: 1,
               uniqueItems: true,
               items: {
                 $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#reference"
@@ -119437,23 +119590,8 @@ var require_property_schema = __commonJS({
           ]
         }
       },
-      additionalProperties: false,
-      required: [
-        "type",
-        "id",
-        "name",
-        "description",
-        "cardinality",
-        "stereotype",
-        "propertyAssignments",
-        "propertyType",
-        "subsettedProperties",
-        "redefinedProperties",
-        "aggregationKind",
-        "isDerived",
-        "isOrdered",
-        "isReadOnly"
-      ]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119483,8 +119621,8 @@ var require_literal_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#propertyAssignments"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "propertyAssignments"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119517,7 +119655,6 @@ var require_diagram_schema = __commonJS({
             },
             {
               type: "array",
-              minItems: 1,
               items: {
                 oneOf: [
                   {
@@ -119541,11 +119678,15 @@ var require_diagram_schema = __commonJS({
           ]
         },
         owner: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#reference"
+          oneOf: [
+            {
+              $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#reference"
+            }
+          ]
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "contents", "owner"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119577,8 +119718,8 @@ var require_class_view_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/RectangleShape"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "modelElement", "shape"]
+      additionalProperties: true,
+      required: ["type", "id", "modelElement"]
     };
   }
 });
@@ -119616,8 +119757,8 @@ var require_relation_view_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/PathShape"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "modelElement", "source", "target", "shape"]
+      additionalProperties: true,
+      required: ["type", "id", "modelElement", "source", "target"]
     };
   }
 });
@@ -119655,8 +119796,8 @@ var require_generalization_view_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/PathShape"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "modelElement", "source", "target", "shape"]
+      additionalProperties: true,
+      required: ["type", "id", "modelElement", "source", "target"]
     };
   }
 });
@@ -119688,8 +119829,8 @@ var require_generalization_set_view_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/TextShape"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "modelElement", "shape"]
+      additionalProperties: true,
+      required: ["type", "id", "modelElement"]
     };
   }
 });
@@ -119721,8 +119862,8 @@ var require_package_view_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/RectangleShape"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "modelElement", "shape"]
+      additionalProperties: true,
+      required: ["type", "id", "modelElement"]
     };
   }
 });
@@ -119748,20 +119889,20 @@ var require_rectangle_shape_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#text"
         },
         x: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         y: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         width: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         height: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "x", "y", "width", "height"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119787,23 +119928,23 @@ var require_text_shape_schema = __commonJS({
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#text"
         },
         x: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         y: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         width: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         height: {
-          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+          $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
         },
         value: {
           $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableString"
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "x", "y", "width", "height", "value"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119835,26 +119976,25 @@ var require_path_shape_schema = __commonJS({
             },
             {
               type: "array",
-              minItems: 1,
               items: {
                 type: "object",
                 properties: {
                   x: {
-                    $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+                    $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
                   },
                   y: {
-                    $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#natural"
+                    $ref: "https://ontouml.org/ontouml-schema/2021-02-26/definitions#nullableNatural"
                   }
                 },
-                additionalProperties: false,
+                additionalProperties: true,
                 required: ["x", "y"]
               }
             }
           ]
         }
       },
-      additionalProperties: false,
-      required: ["type", "id", "name", "description", "points"]
+      additionalProperties: true,
+      required: ["type", "id"]
     };
   }
 });
@@ -119887,25 +120027,36 @@ var require_definitions_schema = __commonJS({
           type: "integer",
           minimum: 0
         },
-        nullableString: {
-          $id: "#nullableString",
-          description: "A auxiliary definition for nullable string fields.",
-          oneOf: [
-            {
-              type: "string",
-              minLength: 1
-            },
-            {
-              type: "null"
-            }
-          ]
-        },
         nullableBoolean: {
           $id: "#nullableBoolean",
           description: "A auxiliary definition for nullable boolean fields.",
           oneOf: [
             {
               type: "boolean"
+            },
+            {
+              type: "null"
+            }
+          ]
+        },
+        nullableNatural: {
+          $id: "#nullableNatural",
+          description: "A auxiliary definition for nullable natural number fields.",
+          oneOf: [
+            {
+              $ref: "#/definitions/natural"
+            },
+            {
+              type: "null"
+            }
+          ]
+        },
+        nullableString: {
+          $id: "#nullableString",
+          description: "A auxiliary definition for nullable string fields.",
+          oneOf: [
+            {
+              type: "string"
             },
             {
               type: "null"
@@ -119942,7 +120093,6 @@ var require_definitions_schema = __commonJS({
           oneOf: [
             {
               type: "array",
-              minItems: 1,
               items: {
                 $ref: "https://ontouml.org/ontouml-schema/2021-02-26/Property"
               }
@@ -119956,6 +120106,9 @@ var require_definitions_schema = __commonJS({
           $id: "#propertyAssignments",
           description: "An object that contains assignments to properties instantiated by the container object. Each field in this object corresponds to an assigment, whose possible values are restricted to null, boolean, number, string, reference, or an array containing any of the former. Assignments are analogous to UML's notion of tagged values. Nullable.",
           oneOf: [
+            {
+              type: "null"
+            },
             {
               type: "object",
               additionalProperties: {
@@ -119978,7 +120131,6 @@ var require_definitions_schema = __commonJS({
                   {
                     type: "array",
                     uniqueItems: true,
-                    minItems: 1,
                     items: {
                       anyOf: [
                         {
@@ -119998,9 +120150,6 @@ var require_definitions_schema = __commonJS({
                   }
                 ]
               }
-            },
-            {
-              type: "null"
             }
           ]
         },
@@ -120029,13 +120178,9 @@ var require_definitions_schema = __commonJS({
         stereotype: {
           $id: "#stereotype",
           description: "A nullable string containing the stereotype applied to its container object. If no stereotype is applied to the object, the value of this field must be null.",
-          oneOf: [
+          allOf: [
             {
-              type: "string",
-              minLength: 1
-            },
-            {
-              type: "null"
+              $ref: "#/definitions/nullableString"
             }
           ]
         },
@@ -120044,18 +120189,12 @@ var require_definitions_schema = __commonJS({
           description: "A nullable field that may contain either a text string or a non-empty object where each key must indicate a language code conforming to the BCP 47 recommendations.",
           oneOf: [
             {
-              type: "null"
-            },
-            {
-              type: "string",
-              minLength: 1
+              $ref: "#/definitions/nullableString"
             },
             {
               type: "object",
-              minProperties: 1,
               additionalProperties: {
-                type: "string",
-                minLength: 1
+                $ref: "#/definitions/nullableString"
               }
             }
           ]
@@ -120123,61 +120262,25 @@ var require_serialization = __commonJS({
       if (!input) {
         throw new Error("Unexpected parameter");
       }
-      let schemaId = typeToSchemaId[_.OntoumlType.PROJECT_TYPE];
+      if (input instanceof _.OntoumlElement) {
+        input = JSON.stringify(input);
+      }
       if (typeof input === "string") {
         input = JSON.parse(input);
-      } else if (input instanceof _.OntoumlElement) {
-        schemaId = typeToSchemaId[input.type];
-        input = JSON.parse(JSON.stringify(input));
-      } else if (typeof input !== "object") {
+      }
+      if (typeof input !== "object") {
         throw new Error("Unexpected parameter");
       }
-      let validator = ajv.getSchema(schemaId);
-      let isValid = validator(input);
+      const schemaId = typeToSchemaId[input.type] || typeToSchemaId[_.OntoumlType.PROJECT_TYPE];
+      const validator = ajv.getSchema(schemaId);
+      const isValid = validator(input);
       return isValid ? isValid : validator.errors;
-    }
-    function isOntoumlElement(value) {
-      if (!value || typeof value !== "object") {
-        return false;
-      }
-      return typeof value.type === "string" && typeof value.id === "string" && Object.keys(value).length > 2;
-    }
-    function isReferenceObject(value) {
-      if (!value || typeof value !== "object") {
-        return false;
-      }
-      return typeof value.type === "string" && typeof value.id === "string" && Object.keys(value).length === 2;
     }
     function getElementMap(element) {
       const map = /* @__PURE__ */ new Map();
       map.set(element.id, element);
       element.getAllContents().forEach((element2) => map.set(element2.id, element2));
       return map;
-    }
-    function resolveReferences(contentsMap, contents) {
-      for (const content of contents) {
-        for (const [key, value] of Object.entries(content)) {
-          if (isReferenceObject(value)) {
-            const referencedElement = contentsMap.get(value.id);
-            if (!referencedElement) {
-              throw new Error("Object contains broken references");
-            } else {
-              content[key] = referencedElement;
-            }
-          } else if (Array.isArray(value)) {
-            value.forEach((item, index) => {
-              if (isReferenceObject(item)) {
-                const referencedElement = contentsMap.get(item.id);
-                if (!referencedElement) {
-                  throw new Error("Object contains broken references");
-                } else {
-                  value[index] = referencedElement;
-                }
-              }
-            });
-          }
-        }
-      }
     }
     function clone(original) {
       switch (original.type) {
@@ -120221,7 +120324,7 @@ var require_serialization = __commonJS({
     }
     function revive(_key, value) {
       let element;
-      if (isOntoumlElement(value)) {
+      if (value !== null && value !== void 0 && value.type && value !== null && value !== void 0 && value.id) {
         if ((value === null || value === void 0 ? void 0 : value.type) === _.OntoumlType.TEXT || (value === null || value === void 0 ? void 0 : value.type) === _.OntoumlType.RECTANGLE) {
           value.topLeft = {
             x: value.x,
@@ -120230,7 +120333,7 @@ var require_serialization = __commonJS({
         }
         element = clone(value);
       }
-      if (element instanceof _.Project || !_key && element instanceof _.ModelElement) {
+      if (element instanceof _.Project || !_key && element instanceof _.OntoumlElement) {
         const project = element instanceof _.Project ? element : null;
         const allContents = element.getAllContents();
         allContents.forEach((content) => {
@@ -120238,12 +120341,13 @@ var require_serialization = __commonJS({
           content.getContents().forEach((ownContent) => ownContent.container = content);
         });
         const contentsMap = getElementMap(element);
-        resolveReferences(contentsMap, [element, ...allContents]);
+        const allElements = [element, ...allContents];
+        allElements.forEach((content) => content.resolveReferences(contentsMap));
       }
       return element ? element : value;
     }
-    function parse(serializedElement, validateProject = false) {
-      if (validateProject) {
+    function parse(serializedElement, validateElement = false) {
+      if (validateElement) {
         const result2 = validate(serializedElement);
         if (result2 !== true) {
           throw new Error("Invalid input");
@@ -120254,7 +120358,9 @@ var require_serialization = __commonJS({
     var serializationUtils2 = {
       validate,
       revive,
-      parse
+      parse,
+      schemas,
+      typeToSchemaId
     };
     exports2.serializationUtils = serializationUtils2;
   }
@@ -120677,149 +120783,6 @@ var require_ontouml = __commonJS({
   }
 });
 
-// dist/libs/service.js
-var require_service = __commonJS({
-  "dist/libs/service.js"() {
-    "use strict";
-  }
-});
-
-// dist/libs/service_options.js
-var require_service_options = __commonJS({
-  "dist/libs/service_options.js"() {
-    "use strict";
-  }
-});
-
-// dist/libs/service_issue.js
-var require_service_issue = __commonJS({
-  "dist/libs/service_issue.js"() {
-    "use strict";
-  }
-});
-
-// dist/libs/service_issue_severity.js
-var require_service_issue_severity = __commonJS({
-  "dist/libs/service_issue_severity.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", {
-      value: true
-    });
-    exports2.ServiceIssueSeverity = void 0;
-    var ServiceIssueSeverity;
-    exports2.ServiceIssueSeverity = ServiceIssueSeverity;
-    (function(ServiceIssueSeverity2) {
-      ServiceIssueSeverity2["ERROR"] = "error";
-      ServiceIssueSeverity2["WARNING"] = "warning";
-      ServiceIssueSeverity2["INCOMPLETE"] = "incomplete";
-      ServiceIssueSeverity2["INFO"] = "info";
-    })(ServiceIssueSeverity || (exports2.ServiceIssueSeverity = ServiceIssueSeverity = {}));
-  }
-});
-
-// dist/libs/index.js
-var require_index = __commonJS({
-  "dist/libs/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", {
-      value: true
-    });
-    var _service = require_service();
-    Object.keys(_service).forEach(function(key) {
-      if (key === "default" || key === "__esModule") return;
-      if (key in exports2 && exports2[key] === _service[key]) return;
-      Object.defineProperty(exports2, key, {
-        enumerable: true,
-        get: function() {
-          return _service[key];
-        }
-      });
-    });
-    var _service_options = require_service_options();
-    Object.keys(_service_options).forEach(function(key) {
-      if (key === "default" || key === "__esModule") return;
-      if (key in exports2 && exports2[key] === _service_options[key]) return;
-      Object.defineProperty(exports2, key, {
-        enumerable: true,
-        get: function() {
-          return _service_options[key];
-        }
-      });
-    });
-    var _service_issue = require_service_issue();
-    Object.keys(_service_issue).forEach(function(key) {
-      if (key === "default" || key === "__esModule") return;
-      if (key in exports2 && exports2[key] === _service_issue[key]) return;
-      Object.defineProperty(exports2, key, {
-        enumerable: true,
-        get: function() {
-          return _service_issue[key];
-        }
-      });
-    });
-    var _service_issue_severity = require_service_issue_severity();
-    Object.keys(_service_issue_severity).forEach(function(key) {
-      if (key === "default" || key === "__esModule") return;
-      if (key in exports2 && exports2[key] === _service_issue_severity[key]) return;
-      Object.defineProperty(exports2, key, {
-        enumerable: true,
-        get: function() {
-          return _service_issue_severity[key];
-        }
-      });
-    });
-  }
-});
-
-// dist/libs/ontouml2alloy/issue.js
-var require_issue = __commonJS({
-  "dist/libs/ontouml2alloy/issue.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", {
-      value: true
-    });
-    exports2.createIssue = createIssue;
-    exports2.IssueType = void 0;
-    var _ = require_index();
-    var IssueType = {
-      UNKNOWN_CLASS_STEREOTYPE: {
-        code: "UNKNOWN_CLASS_STEREOTYPE",
-        severity: _.ServiceIssueSeverity.ERROR,
-        title: "Unknown Class Stereotype"
-      },
-      MISSING_VALUE_DEFAULTED: {
-        code: "MISSING_VALUE_DEFAULTED",
-        severity: _.ServiceIssueSeverity.WARNING,
-        title: "Missing Value Defaulted"
-      },
-      UNSUPPORTED_ELEMENT_REMOVED: {
-        code: "UNSUPPORTED_ELEMENT_REMOVED",
-        severity: _.ServiceIssueSeverity.WARNING,
-        title: "Unsupported Element Removed"
-      },
-      INCOMPLETE_RELATOR_PATTERN: {
-        code: "INCOMPLETE_RELATOR_PATTERN",
-        severity: _.ServiceIssueSeverity.WARNING,
-        title: "Incomplete Relator Pattern"
-      },
-      DATATYPE_NOT_FOUND: {
-        code: "DATATYPE_NOT_FOUND",
-        severity: _.ServiceIssueSeverity.WARNING,
-        title: "Datatype Not Found"
-      }
-    };
-    exports2.IssueType = IssueType;
-    function createIssue(element, issueType, description) {
-      return {
-        id: element.id,
-        ...issueType,
-        description,
-        data: element
-      };
-    }
-  }
-});
-
 // dist/libs/ontouml2alloy/util.js
 var require_util2 = __commonJS({
   "dist/libs/ontouml2alloy/util.js"(exports2) {
@@ -121028,7 +120991,6 @@ var require_property_functions = __commonJS({
     });
     exports2.transformProperty = transformProperty;
     var _ontouml = require_ontouml();
-    var _issue = require_issue();
     var _util = require_util2();
     function transformProperty(transformer2, property) {
       if (property.container instanceof _ontouml.Class && property.container.hasDatatypeStereotype()) {
@@ -121195,10 +121157,6 @@ var require_property_functions = __commonJS({
       const attributeName = (0, _util.getNormalizedName)(transformer2, attribute);
       const ownerDatatypeName = (0, _util.getNormalizedName)(transformer2, attribute.container);
       const ownerDatatype = (0, _util.getCorrespondingDatatype)(ownerDatatypeName, transformer2.datatypes);
-      if (!ownerDatatype) {
-        transformer2.issues.push((0, _issue.createIssue)(attribute, _issue.IssueType.DATATYPE_NOT_FOUND, `Attribute '${attribute.getName() || attribute.id}' was skipped because datatype '${ownerDatatypeName}' was not transformed.`));
-        return;
-      }
       const cardinality = (0, _util.getCardinalityKeyword)(attribute.cardinality);
       const datatypeName = (0, _util.getNormalizedName)(transformer2, attribute.propertyType);
       ownerDatatype[1].push((attributeName + ": " + cardinality + " " + datatypeName).replace(/\s{2,}/g, " "));
@@ -121285,9 +121243,7 @@ var require_class_functions = __commonJS({
     function transformEnumerationClass(transformer2, _class) {
       const enumName = (0, _util.getNormalizedName)(transformer2, _class);
       const literals = _class.literals.map((literal) => (0, _util.getNormalizedName)(transformer2, literal));
-      if (literals.length) {
-        transformer2.addEnum("enum " + enumName + " {\n        " + literals.join(", ") + "}");
-      }
+      transformer2.addEnum("enum " + enumName + " {\n        " + literals.join(", ") + "}");
     }
     function transformRelatorConstraint(transformer2, _class) {
       const mediations = [];
@@ -121342,7 +121298,6 @@ var require_class_functions = __commonJS({
       let aspectClasses = [];
       for (const _class of transformer2.model.getAllClasses()) {
         var _transformer$options2;
-        if (!_class.isRestrictedToEndurant()) continue;
         const isUltimateSortal = _class.hasUltimateSortalStereotype();
         const isInstantiableAbstractLeaf = ((_transformer$options2 = transformer2.options) === null || _transformer$options2 === void 0 ? void 0 : _transformer$options2.allowAbstractLeafInstances) && _class.isAbstract && _class.getChildren().length === 0;
         if (!isUltimateSortal && !isInstantiableAbstractLeaf) continue;
@@ -121406,37 +121361,164 @@ var require_generalization_set_functions = __commonJS({
       value: true
     });
     exports2.transformGeneralizationSet = transformGeneralizationSet;
-    var _ontouml = require_ontouml();
     var _util = require_util2();
     function transformGeneralizationSet(transformer2, genSet) {
       if (!genSet.generalizations || genSet.generalizations.length === 0 || !genSet.isComplete && !genSet.isDisjoint) {
         return;
       }
-      const classChildren = genSet.generalizations.map((gen) => gen.specific).filter((child) => child.type === _ontouml.OntoumlType.CLASS_TYPE);
-      const onlyClassChildren = classChildren.length === genSet.generalizations.length;
-      if (!onlyClassChildren) {
+      const parent = genSet.getGeneralClass();
+      if (!parent) {
         return;
       }
-      const classParents = genSet.generalizations.map((gen) => gen.general).filter((parent2) => parent2 && parent2.type === _ontouml.OntoumlType.CLASS_TYPE);
-      const onlyClassParents = classParents.length === genSet.generalizations.length;
-      const uniqueParent = classParents.length > 0 && classParents.every((p) => p === classParents[0]);
-      if (!onlyClassParents || !uniqueParent) {
-        return;
-      }
-      const parent = classParents[0];
       const children = genSet.generalizations.map((gen) => (0, _util.getNormalizedName)(transformer2, gen.specific));
-      const constraints = [];
-      if (genSet.isDisjoint && children.length > 1) {
-        constraints.push("        disj[" + children.join(",") + "]");
-      }
-      if (genSet.isComplete) {
-        constraints.push("        " + (0, _util.getNormalizedName)(transformer2, parent) + " = " + children.join("+"));
-      }
-      if (constraints.length === 0) {
-        return;
-      }
-      const fact = "fact generalizationSet {\n" + constraints.join("\n") + "\n}";
+      let fact = "fact generalizationSet {\n";
+      if (genSet.isDisjoint && children.length > 1) fact += "        disj[" + children.join(",") + "]\n";
+      if (genSet.isComplete) fact += "        " + (0, _util.getNormalizedName)(transformer2, parent) + " = " + children.join("+") + "\n";
+      fact += "}";
       transformer2.addFact(fact);
+    }
+  }
+});
+
+// dist/libs/service.js
+var require_service = __commonJS({
+  "dist/libs/service.js"() {
+    "use strict";
+  }
+});
+
+// dist/libs/service_options.js
+var require_service_options = __commonJS({
+  "dist/libs/service_options.js"() {
+    "use strict";
+  }
+});
+
+// dist/libs/service_issue.js
+var require_service_issue = __commonJS({
+  "dist/libs/service_issue.js"() {
+    "use strict";
+  }
+});
+
+// dist/libs/service_issue_severity.js
+var require_service_issue_severity = __commonJS({
+  "dist/libs/service_issue_severity.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", {
+      value: true
+    });
+    exports2.ServiceIssueSeverity = void 0;
+    var ServiceIssueSeverity;
+    exports2.ServiceIssueSeverity = ServiceIssueSeverity;
+    (function(ServiceIssueSeverity2) {
+      ServiceIssueSeverity2["ERROR"] = "error";
+      ServiceIssueSeverity2["WARNING"] = "warning";
+      ServiceIssueSeverity2["INCOMPLETE"] = "incomplete";
+      ServiceIssueSeverity2["INFO"] = "info";
+    })(ServiceIssueSeverity || (exports2.ServiceIssueSeverity = ServiceIssueSeverity = {}));
+  }
+});
+
+// dist/libs/index.js
+var require_index = __commonJS({
+  "dist/libs/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", {
+      value: true
+    });
+    var _service = require_service();
+    Object.keys(_service).forEach(function(key) {
+      if (key === "default" || key === "__esModule") return;
+      if (key in exports2 && exports2[key] === _service[key]) return;
+      Object.defineProperty(exports2, key, {
+        enumerable: true,
+        get: function() {
+          return _service[key];
+        }
+      });
+    });
+    var _service_options = require_service_options();
+    Object.keys(_service_options).forEach(function(key) {
+      if (key === "default" || key === "__esModule") return;
+      if (key in exports2 && exports2[key] === _service_options[key]) return;
+      Object.defineProperty(exports2, key, {
+        enumerable: true,
+        get: function() {
+          return _service_options[key];
+        }
+      });
+    });
+    var _service_issue = require_service_issue();
+    Object.keys(_service_issue).forEach(function(key) {
+      if (key === "default" || key === "__esModule") return;
+      if (key in exports2 && exports2[key] === _service_issue[key]) return;
+      Object.defineProperty(exports2, key, {
+        enumerable: true,
+        get: function() {
+          return _service_issue[key];
+        }
+      });
+    });
+    var _service_issue_severity = require_service_issue_severity();
+    Object.keys(_service_issue_severity).forEach(function(key) {
+      if (key === "default" || key === "__esModule") return;
+      if (key in exports2 && exports2[key] === _service_issue_severity[key]) return;
+      Object.defineProperty(exports2, key, {
+        enumerable: true,
+        get: function() {
+          return _service_issue_severity[key];
+        }
+      });
+    });
+  }
+});
+
+// dist/libs/ontouml2alloy/issue.js
+var require_issue = __commonJS({
+  "dist/libs/ontouml2alloy/issue.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", {
+      value: true
+    });
+    exports2.createIssue = createIssue;
+    exports2.IssueType = void 0;
+    var _ = require_index();
+    var IssueType = {
+      UNKNOWN_CLASS_STEREOTYPE: {
+        code: "UNKNOWN_CLASS_STEREOTYPE",
+        severity: _.ServiceIssueSeverity.ERROR,
+        title: "Unknown Class Stereotype"
+      },
+      MISSING_VALUE_DEFAULTED: {
+        code: "MISSING_VALUE_DEFAULTED",
+        severity: _.ServiceIssueSeverity.WARNING,
+        title: "Missing Value Defaulted"
+      },
+      UNSUPPORTED_ELEMENT_REMOVED: {
+        code: "UNSUPPORTED_ELEMENT_REMOVED",
+        severity: _.ServiceIssueSeverity.WARNING,
+        title: "Unsupported Element Removed"
+      },
+      INCOMPLETE_RELATOR_PATTERN: {
+        code: "INCOMPLETE_RELATOR_PATTERN",
+        severity: _.ServiceIssueSeverity.WARNING,
+        title: "Incomplete Relator Pattern"
+      },
+      DATATYPE_NOT_FOUND: {
+        code: "DATATYPE_NOT_FOUND",
+        severity: _.ServiceIssueSeverity.WARNING,
+        title: "Datatype Not Found"
+      }
+    };
+    exports2.IssueType = IssueType;
+    function createIssue(element, issueType, description) {
+      return {
+        id: element.id,
+        ...issueType,
+        description,
+        data: element
+      };
     }
   }
 });
@@ -121587,10 +121669,6 @@ var require_relation_functions = __commonJS({
       const sourceName = (0, _util.getNormalizedName)(transformer2, relation.getSource());
       const targetName = (0, _util.getNormalizedName)(transformer2, relation.getTarget());
       const sourceDatatype = (0, _util.getCorrespondingDatatype)(sourceName, transformer2.datatypes);
-      if (!sourceDatatype) {
-        transformer2.issues.push((0, _issue.createIssue)(relation, _issue.IssueType.DATATYPE_NOT_FOUND, `Relation '${relation.getName() || relation.id}' was skipped because datatype '${sourceName}' was not transformed.`));
-        return;
-      }
       let relationName = (0, _util.getNormalizedName)(transformer2, relation);
       sourceDatatype[1].push(relationName + ": " + targetName);
       const [sourceLowerBound, sourceUpperBound] = (0, _util.getCustomCardinality)(relation.getSourceEnd().cardinality);
@@ -121655,7 +121733,7 @@ var require_preprocessor = __commonJS({
             issues: this.issues
           };
         }
-        this.applyDefaults();
+        this.remapStereotypes();
         this.removeUnsupportedElements();
         return {
           ok: true,
@@ -121675,20 +121753,13 @@ var require_preprocessor = __commonJS({
       hasUnsupportedStereotype(decoratable) {
         return decoratable == null || decoratable.hasAnyStereotype(["event", "situation", "type"]);
       }
-      // Normalizes (remapping and defaulting) model metadata before removal/transformation.
-      applyDefaults() {
+      remapStereotypes() {
+        this.remapAbstractToDatatype();
+      }
+      remapAbstractToDatatype() {
         for (const _class of this.model.getAllClasses()) {
           if (_class.hasAbstractStereotype()) {
             _class.stereotype = _ontouml.ClassStereotype.DATATYPE;
-          }
-        }
-        for (const _class of this.model.getAllClasses()) {
-          if (_class.hasDatatypeStereotype() || _class.hasEnumerationStereotype() || this.hasUnsupportedStereotype(_class)) {
-            continue;
-          }
-          if (!_class.restrictedTo || _class.restrictedTo.length === 0) {
-            _class.restrictedTo = [..._ontouml.natureUtils.EndurantNatures];
-            this.issues.push((0, _issue.createIssue)(_class, _issue.IssueType.MISSING_VALUE_DEFAULTED, `Class '${_class.getName() || _class.id}' had no restrictedTo natures and was defaulted to all endurant natures.`));
           }
         }
       }
@@ -121738,7 +121809,7 @@ var require_preprocessor = __commonJS({
           const hasUnsupportedPropertyType = ownerIsDatatype && !!property.propertyType && (!(property.propertyType instanceof _ontouml.Class) || !property.propertyType.hasDatatypeStereotype() && !property.propertyType.hasEnumerationStereotype());
           if (hasUnsupportedPropertyType) {
             this.removeProperty(property);
-            this.generateIssue(property, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, `Attribute '${property.getName() || property.id}' was removed because datatype attributes can only be typed by datatypes/enumerations.`);
+            this.generateIssue(property, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, `Attribute '${property.getName() || property.id}' was removed because attributes can only be typed by datatypes/enumerations.`);
             continue;
           }
           const typeWasRemoved = !!((_property$propertyTyp = property.propertyType) !== null && _property$propertyTyp !== void 0 && _property$propertyTyp.id) && !liveClassIds.has(property.propertyType.id);
@@ -121827,6 +121898,22 @@ var require_preprocessor = __commonJS({
             this.generateIssue(generalizationSet, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, removalDescription);
           }
         }
+        for (const generalizationSet of this.model.getAllGeneralizationSets()) {
+          if (!generalizationSet.involvesClasses()) {
+            const genSetName = generalizationSet.getName() || generalizationSet.id;
+            generalizationSet.removeSelfFromContainer();
+            this.generateIssue(generalizationSet, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, `Generalization Set '${genSetName}' was removed because not all of its members are class-to-class generalisations.`);
+          }
+        }
+        for (const generalizationSet of this.model.getAllGeneralizationSets()) {
+          const generals = generalizationSet.generalizations.map((gen) => gen.general);
+          const hasUniqueParent = generals.length > 0 && generals.every((g) => g === generals[0]);
+          if (!hasUniqueParent) {
+            const genSetName = generalizationSet.getName() || generalizationSet.id;
+            generalizationSet.removeSelfFromContainer();
+            this.generateIssue(generalizationSet, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, `Generalization Set '${genSetName}' was removed because it does not have a unique common parent class.`);
+          }
+        }
       }
       removeOrphanedElements() {
         const liveClasses = new Set(this.model.getAllClasses().map((c) => c.id));
@@ -121849,6 +121936,15 @@ var require_preprocessor = __commonJS({
             const specName = ((_generalization$speci2 = generalization.specific) === null || _generalization$speci2 === void 0 ? void 0 : _generalization$speci2.getName()) ?? "?";
             const genName = ((_generalization$gener2 = generalization.general) === null || _generalization$gener2 === void 0 ? void 0 : _generalization$gener2.getName()) ?? "?";
             this.generateIssue(generalization, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, `Generalization '${specName} -> ${genName}' was removed because its specific or general element was removed.`);
+          }
+        }
+        const liveGeneralizationIds = new Set(this.model.getAllGeneralizations().map((g) => g.id));
+        for (const generalizationSet of this.model.getAllGeneralizationSets()) {
+          const hasRemovedMember = generalizationSet.generalizations.some((gen) => !liveGeneralizationIds.has(gen.id));
+          if (hasRemovedMember) {
+            const genSetName = generalizationSet.getName() || generalizationSet.id;
+            generalizationSet.removeSelfFromContainer();
+            this.generateIssue(generalizationSet, _issue.IssueType.UNSUPPORTED_ELEMENT_REMOVED, `Generalization Set '${genSetName}' was removed because one or more of its members were removed.`);
           }
         }
       }
@@ -122005,8 +122101,8 @@ var require_ontouml2alloy = __commonJS({
       //added; OntoumlElement ID, normalizedName
       /*
         Lines 13-33 define a class Ontouml2Alloy that implements Service. The class has a constructor
-        with an input parameter that can be either a Project or a Package object. The class has many properties 
-        that are used to store the different parts of the Alloy code generated during the transformation process. 
+        with an input parameter that can be either a Project or a Package object. The class has many properties
+        that are used to store the different parts of the Alloy code generated during the transformation process.
         The transform() method is the main method of the class that orchestrates the transformation process.
       */
       constructor(input, options) {
@@ -122164,8 +122260,8 @@ var require_ontouml2alloy = __commonJS({
         return true;
       }
       /*
-      This method retrieves all the classes present in the model and applies a transformation 
-      to each of them using the transformClass() function. After that, it applies transformations to 
+      This method retrieves all the classes present in the model and applies a transformation
+      to each of them using the transformClass() function. After that, it applies transformations to
       additional class constraints and datatype constraints. Finally, it returns true.
       */
       transformGeneralizations() {
